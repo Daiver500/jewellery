@@ -58,7 +58,7 @@ const imageswebp = () => {
 
 exports.imageswebp = imageswebp;
 
-//SVG sprite
+/*//SVG sprite
 
 const sprite = () => {
   return gulp.src("source/img/sprite/icon-*.svg")
@@ -67,7 +67,7 @@ const sprite = () => {
     .pipe(gulp.dest("public/img"));
 };
 
-exports.sprite = sprite;
+exports.sprite = sprite;*/
 
 //HTML
 
@@ -113,8 +113,8 @@ const build = () => gulp.series (
   copy,
   styles,
   images,
-  sprite,
-  htmlinclude,
+  //sprite,
+  //htmlinclude,
   imageswebp,
 );
 
