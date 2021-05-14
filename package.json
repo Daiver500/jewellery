@@ -1,7 +1,7 @@
 {
-  "name": "print",
+  "name": "jewellery",
   "private": true,
-  "description": "print",
+  "description": "jewellery",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "9.8.4",
