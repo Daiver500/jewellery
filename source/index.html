@@ -27,9 +27,7 @@
                         <svg class="navigation__toggle-open navigation__toggle-open--opened" width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M0 1H25M0 9H25M0 17H25" stroke="white" stroke-width="2"/>
                           </svg>
-                        <svg class="navigation__toggle-close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M10 7.77813L17.7781 0L20 2.22187L12.2219 10L20 17.7781L17.7781 20L10 12.2219L2.22187 20L0 17.7781L7.77813 10L0 2.22187L2.22187 0L10 7.77813Z" fill="currentColor"/>
-                          </svg>
+
                      </button>
                   <input class="navigation__input" type="text" placeholder="Type here to seacrh">
                   <a class="navigation__logo" aria-label="логотип"><svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +48,7 @@
                   </div>
                   <div class="navigation__menu">
                     <ul class="navigation__list">
-                      <li class="navigation__item"><a class="navigation__link navigation__link--index" target="_blank">What's new</a></li>
+                      <li class="navigation__item"><a class="navigation__link navigation__link--active" target="_blank">What's new</a></li>
                       <li class="navigation__item"><a class="navigation__link" href="catalog.html" target="_blank">Chockers</a></li>
                       <li class="navigation__item"><a class="navigation__link" href="#" target="_blank">Necklaces</a></li>
                       <li class="navigation__item"><a class="navigation__link" href="#" target="_blank">Rings</a></li>
@@ -91,6 +89,7 @@
               <div class="slider__wrapper">
                 <div class="slider__wrapper-inner">
                   <div class="slider__item">
+                    <a class="slider__link" href="product-card.html" target="_blank">
                     <picture class="slider__picture">
                     <!--<source type="image/webp" srcset="img/slider-picture-1.webp, img/slider-picture-1@2x.webp 2x ">-->
                     <img class="slider__image" src="img/slider-picture-1.jpg" srcset="img/slider-picture-1@2x.jpg 2x" alt="ювелирное изделие" width="270" height="284" />
@@ -99,8 +98,10 @@
                       <p class="slider__text">Necklace with amethyst</p>
                       <p class="slider__price">$ 145</p> <!--width: 270, height: 284, for retina width: 540, height: 568-->
                     </div>
+                    </a>
                   </div>
                   <div class="slider__item">
+                    <a class="slider__link" href="product-card.html" target="_blank">
                     <picture class="slider__picture">
                     <!--<source type="image/webp" srcset="img/slider-picture-2.webp, img/slider-picture-2@2x.webp 2x ">-->
                     <img class="slider__image" src="img/slider-picture-2.jpg" srcset="img/slider-picture-2@2x.jpg 2x" alt="ювелирное изделие" width="270" height="284" />
@@ -108,9 +109,11 @@
                     <div class="slider__information">
                       <p class="slider__text">Layered сhoker</p>
                       <p class="slider__price">$ 115</p> <!--width: 270, height: 284, for retina width: 540, height: 568-->
+                    </div>
+                    </a>
                   </div>
                   <div class="slider__item">
-                    <picture class="slider__picture">
+                    <a class="slider__link" href="product-card.html" target="_blank">
                     <!--<source type="image/webp" srcset="img/slider-picture-3.webp, img/slider-picture-3@2x.webp 2x ">-->
                     <img class="slider__image" src="img/slider-picture-3.jpg" srcset="img/slider-picture-3@2x.jpg 2x" alt="ювелирное изделие" width="270" height="284" />
                     </picture>
@@ -118,8 +121,10 @@
                       <p class="slider__text">Gold chain</p>
                       <p class="slider__price">$ 215</p> <!--width: 270, height: 284, for retina width: 540, height: 568-->
                     </div>
+                  </a>
                   </div>
                   <div class="slider__item">
+                    <a class="slider__link" href="product-card.html" target="_blank">
                     <picture class="slider__picture">
                     <!--<source type="image/webp" srcset="img/slider-picture-4.webp, img/slider-picture-4@2x.webp 2x ">-->
                     <img class="slider__image" src="img/slider-picture-4.jpg" srcset="img/slider-picture-4@2x.jpg 2x" alt="ювелирное изделие" width="270" height="284" />
@@ -128,6 +133,7 @@
                       <p class="slider__text">Galaxy earrings</p>
                       <p class="slider__price">$ 95</p> <!--width: 270, height: 284, for retina width: 540, height: 568-->
                     </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -359,7 +365,7 @@
             </div>
           </div>
          </footer>
-         <section class="login">
+         <section class="login hidden">
           <div class="login__inner">
             <div class="login__image">
               <picture class="login__picture">
