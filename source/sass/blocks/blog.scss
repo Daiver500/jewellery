@@ -1,0 +1,140 @@
+.blog {
+  margin-bottom: 130px;
+}
+
+.blog__inner {
+  max-width: 1170px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.blog__header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 70px;
+  flex-direction: column;
+}
+
+.blog__title {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-family: "Cormorant-Garamond", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44.2px;
+  letter-spacing: 3px;
+}
+
+.blog__link-header,
+.blog__link {
+  font-weight: 500;
+  position: relative;
+}
+
+.blog__link-header::after,
+.blog__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  background-repeat: no-repeat;
+  height: 1px;
+  border: 1px solid $brown;
+}
+
+.blog__link:hover,
+.blog__link:focus,
+.blog__link-header:hover,
+.blog__link-header:focus {
+  opacity: 0.5;
+}
+
+
+.blog__link-header::after {
+  width: 64px;
+}
+
+.blog__link::after {
+  width: 97px;
+}
+
+.blog__item-tablet {
+  display: none;
+}
+
+.blog__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.blog__set-of-pictures {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__item {
+  display: grid;
+  max-width: 570px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.blog__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.blog__item-desktop {
+  position: relative;
+}
+
+.blog__information--desktop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-width: 285px;
+  min-height: 300px;
+}
+
+.blog__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $cards;
+}
+
+.blog__text,
+.blog__text-first,
+.blog__data {
+  margin-top: 0;
+}
+
+.blog__data {
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px;
+  color: $grey;
+}
+
+.blog__text,
+.blog__text-first {
+  font-family: "Cormorant-Garamond", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 33.8px;
+}
+
+.blog__text-first {
+  margin-bottom: 0;
+}
+
+.blog__text {
+  margin-bottom: 50px;
+}
+
+.blog__image,
+.blog__image-desktop {
+  height: 100%;
+}
