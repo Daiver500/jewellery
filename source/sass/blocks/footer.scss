@@ -13,6 +13,17 @@
   display: flex;
   flex-direction: column;
   padding-right: 100px;
+  position: relative;
+}
+
+.footer__information::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  height: 1px;
+  width: 500px;
+  border: 1px solid $white;
 }
 
 .footer__title,
@@ -43,7 +54,9 @@
   line-height: 21px;
   min-width: 395px;
   max-height: 20px;
+  color: $white;
 }
+
 
 .footer__sign-up span {
   color: $white;
@@ -61,7 +74,7 @@
   top: 6px;
   background-repeat: no-repeat;
   width: 29px;
-  height: 9px;
+  height: 11px;
   background-image: url("../img/arrow-right-footer-icon.svg");
 }
 

@@ -15,6 +15,11 @@
 <body class="page">
   <section class="login">
     <div class="login__inner">
+      <button class="login__close" type="button" aria-label="Закрыть модальное окно">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z" fill="currentColor"/>
+          </svg>
+      </button>
       <div class="login__image">
         <picture class="login__picture">
             <!--<source type="image/webp" srcset="img/login-picture.webp, img/login-picture@2x.webp 2x ">-->
@@ -31,7 +36,7 @@
           <label> <span class="visually-hidden">Password</span>
             <input class="login__password" type="password" name="password" placeholder="Password" required="">
             </label>
-          <a class="login__link" href="#" target="_blank">Forgot your password?</a>
+          <a class="login__link" href="#" target="_blank"><span>Forgot your password?</span></a>
 
           <button class="login__button" type="submit">Log In</button>
           <p class="login__text">Don’t have an account? <span class="login__sign-up-text">Sign Up</span></p>
@@ -39,11 +44,7 @@
           </div>
         </div>
       </form>
-      <button class="login__close" type="button" aria-label="Закрыть модальное окно">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z" fill="currentColor"/>
-          </svg>
-      </button>
+
     </div>
   </section>
   <section class="login-success hidden">
