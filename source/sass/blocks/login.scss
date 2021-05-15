@@ -2,7 +2,7 @@
 .login-success__inner {
   display: flex;
   width: 430px;
-  //min-height: 586px;
+  min-height: 586px;
   position: relative;
   top: calc(50% - 295px);
   right: 0;
@@ -85,6 +85,14 @@
   position: relative;
 }
 
+.login__close:hover,
+.login__close:focus,
+.login-success__close:hover,
+.login-success__close:focus,
+.login__form input:hover,
+.login__form input:focus {
+  opacity: 0.5;
+}
 
 .login__mail {
   margin-bottom: 40px;
@@ -105,7 +113,8 @@
   font-weight: 500;
   color: $white;
   border: none;
-  padding: 14px 45px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   background-color: $brown;
   cursor: pointer;
   margin-top: 50px;
@@ -116,6 +125,7 @@
 .login__button:focus {
   background-color: $white;
   color: $black;
+  border: 1px solid $brown;
 }
 
 .login__text {
@@ -134,13 +144,15 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  max-width: 380px;
+  max-width: 340px;
 }
 
 .login-success__text {
-  color: $white;
-  font-size: 24px;
-  line-height: 31px;
+  font-family: "Cormorant-Garamond", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44.2px;
+  color: $black;
 }
 
 .login__close,

@@ -1,0 +1,159 @@
+.modal__inner {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  min-height: 440px;
+  position: relative;
+  top: calc(50% - 295px);
+  right: 0;
+  left: 0;
+  bottom: auto;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  background-color: $white;
+  padding: 55px 35px;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__header,
+.modal__text {
+  margin-top: 0;
+  color: $black;
+  text-align: center;
+}
+
+.modal__title {
+  margin-bottom: 55px;
+  font-family: "Cormorant-Garamond", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33.8px;
+  margin-top: 0;
+}
+
+.modal__information {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.modal__data {
+  padding-right: 165px;
+  padding-left: 15px;
+}
+
+.modal__item,
+.modal__price {
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.modal__item {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.modal__price {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.modal__unit {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal__plus,
+.modal__minus {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.modal__close:hover,
+.modal__close:focus,
+.modal__plus:hover,
+.modal__minus:hover,
+.modal__plus:focus,
+.modal__minus:focus {
+  opacity: 0.5;
+}
+
+.modal__text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.modal__text p {
+  margin: 0;
+}
+
+.modal__text-price,
+.modal__text-cart {
+  font-size: 14px;
+  line-height: 18.2px;
+}
+
+.modal__text-cart {
+  font-weight: 500;
+}
+
+.modal__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__link {
+  font-weight: 500;
+  border: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: $brown;
+  cursor: pointer;
+  width: 200px;
+  max-height: 68px;
+}
+
+.modal__link span {
+  color: $white;
+}
+
+.modal__link:hover,
+.modal__link:focus,
+.modal__link:hover span,
+.modal__link:focus span {
+  background-color: $white;
+  color: $black;
+}
+
+.modal__link:hover,
+.modal__link:focus {
+  border: 1px solid $brown;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 28px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
