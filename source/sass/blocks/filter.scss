@@ -112,27 +112,27 @@
   width: 16px;
   height: 15px;
   margin-left: 0;
-  background-image: url("../../img/chekbox-not-checked.svg");
+  background-image: url("../img/chekbox-not-checked.svg");
   background-repeat: no-repeat;
   left: 0;
   top: 2px;
 }
 
 .checkbox__input:checked + .checkbox__box {
-  background-image: url("../../img/checkbox-checked.svg");
+  background-image: url("../img/checkbox-checked.svg");
   background-repeat: no-repeat;
 }
 
 .checkbox__input:hover + .checkbox__box,
 .checkbox__input:focus + .checkbox__box {
-  background-image: url("../../img/chekbox-not-checked.svg");
+  background-image: url("../img/chekbox-not-checked.svg");
   background-repeat: no-repeat;
   opacity: 0.5;
 }
 
 .checkbox__input:checked:hover + .checkbox__box,
 .checkbox__input:checked:focus + .checkbox__box {
-  background-image: url("../../img/checkbox-checked.svg");
+  background-image: url("../img/checkbox-checked.svg");
   background-repeat: no-repeat;
   opacity: 0.5;
 }

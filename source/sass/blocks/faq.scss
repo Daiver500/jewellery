@@ -24,7 +24,7 @@
 
 .faq__item {
   position: relative;
-  min-width: 890px;
+  min-width: 830px;
 }
 
 .faq__item:not(:last-child) {
@@ -68,7 +68,7 @@
 .faq__button {
   position: absolute;
   top: 0;
-  right: 45px;
+  right: 0;
   border: none;
   background-color: inherit;
   cursor: pointer;
