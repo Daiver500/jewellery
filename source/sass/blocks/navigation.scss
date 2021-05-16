@@ -48,7 +48,8 @@
   background-image: url("../img/search-icon.svg");
 }
 
-.navigation__logo {
+.navigation__logo,
+.navigation__logo svg {
   color: $brown;
 }
 

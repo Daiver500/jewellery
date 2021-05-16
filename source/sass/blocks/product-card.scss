@@ -1,0 +1,163 @@
+.card {
+  margin-bottom: 130px;
+  position: relative;
+  margin-top: 99px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -160px;
+  background-repeat: no-repeat;
+  height: 1px;
+  border: 1px solid $borders;
+  width: 100%;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  background-repeat: no-repeat;
+  height: 1px;
+  border: 1px solid $borders;
+  width: 100%;
+}
+
+.card__inner {
+  max-width: 1120px;
+}
+
+.card__pictures {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card__small-pictures {
+  display: flex;
+  flex-direction: column;
+  max-width: 125px;
+  padding-right: 10px;
+}
+
+.card__small-picture {
+  margin-bottom: 25px;
+}
+
+.card__small-picture img {
+  max-width: 100px;
+  max-height: 125px;
+}
+
+.card__big-picture {
+  padding-right: 10px;
+}
+
+.card__big-picture img {
+  max-width: 470px;
+  max-height: 435px;
+}
+
+.card__information {
+  display: flex;
+  flex-direction: column;
+  min-width: 370px;
+}
+
+.card__title,
+.card__text {
+  margin-top: 0;
+}
+
+.card__title {
+  margin-bottom: 20px;
+  font-family: "Cormorant-Garamond", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44.2px;
+}
+
+.card__text {
+  margin-bottom: 20px;
+  font-size: 26px;
+  line-height: 33.8px;
+}
+
+.card__buttons {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.card__button {
+  border: none;
+  background-color: inherit;
+  font-weight: 500;
+  padding-left: 0;
+}
+
+.card__button--active {
+  color: $grey;
+}
+
+.card__button:not(:last-child) {
+  padding-right: 35px;
+}
+
+.card__table {
+  margin-bottom: 20px;
+}
+
+.table__title {
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.table__title,
+.table__data {
+  font-size: 14px;
+  line-height: 18.2px;
+  padding-bottom: 25px;
+}
+
+.table__data {
+  text-align: right;
+}
+
+.card__link {
+  margin-bottom: 21px;
+  max-width: 370px;
+  background-color: $brown;
+  font-weight: 500;
+  padding-top: 25px;
+  padding-bottom: 28px;
+  text-align: center;
+  max-height: 68px;
+}
+
+.card__link:hover,
+.card__link:focus {
+  background-color: $white;
+  border: 1px solid $brown;
+}
+
+.card__link:focus span,
+.card__link:hover span {
+  color: $black;
+}
+
+.card__link span {
+  color: $white;
+}
+
+.card__final-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card__details {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px;
+  color: $grey;
+}
