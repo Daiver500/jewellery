@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 117px;
+  margin-bottom: 70px;
 }
 
 .gallery__title {
@@ -84,5 +84,24 @@
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 2;
+}
+
+@media (max-width: $max-tablet-width) {
+  .gallery {
+    margin-bottom: 80px;
+  }
+
+  .gallery__inner {
+    max-width: 680px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .gallery__pictures {
+    grid-template-columns: 1fr 231px 1fr 1fr;
+    grid-template-rows: 133px 87px;
+    grid-column-gap: 16px;
+    grid-row-gap: 20px;
+  }
 }
 

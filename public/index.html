@@ -21,7 +21,7 @@
                 <div class="navigation__top">
                   <div class="navigation__upper-part">
                     <button class="navigation__toggle" type="button">
-                      <svg class="navigation__toggle-open" width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="navigation__toggle-open hidden" width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 1H25M0 9H25M0 17H25" stroke="#1D1613" stroke-width="2"/>
                         </svg>
                         <svg class="navigation__toggle-open navigation__toggle-open--opened" width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@
                   <a href="login.html" class="navigation__login" target="_blank" >Login</a>
                   <a href="product-card.html" class="navigation__cart-desktop" target="_blank">Cart 0</a>
                   <a href="#" class="navigation__cart-mobile"aria-label="корзина">
-                    <svg class="navigation__cart-toggle" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="navigation__cart-toggle hidden" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z" stroke="#1D1613" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                       <svg class="navigation__cart-toggle navigation__cart-toggle--opened" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,14 +46,23 @@
                       </a>
                   </div>
                   </div>
+                  <div class="navigation__input-tablet">
+                    <input class="navigation__input-tablet-menu">
+                  </div>
                   <div class="navigation__menu">
                     <ul class="navigation__list">
-                      <li class="navigation__item"><a class="navigation__link" href="#">What's new</a></li>
-                      <li class="navigation__item"><a class="navigation__link" href="catalog.html" target="_blank">Chockers</a></li>
-                      <li class="navigation__item"><a class="navigation__link" href="#" target="_blank">Necklaces</a></li>
-                      <li class="navigation__item"><a class="navigation__link" href="#" target="_blank">Rings</a></li>
-                      <li class="navigation__item"><a class="navigation__link" href="#" target="_blank">Earings</a></li>
+                      <li class="navigation__item"><a class="navigation__link" href="#"><span>What's new</span></a></li>
+                      <li class="navigation__item"><a class="navigation__link" href="catalog.html" target="_blank"><span>Chockers</span></a></li>
+                      <li class="navigation__item"><a class="navigation__link" href="#" target="_blank"><span>Necklaces</span></a></li>
+                      <li class="navigation__item"><a class="navigation__link" href="#" target="_blank"><span>Rings</span></a></li>
+                      <li class="navigation__item"><a class="navigation__link" href="#" target="_blank"><span>Earings</span></a></li>
                   </ul>
+                  <ul class="navigation__list-tablet">
+                    <li class="navigation__item navigation__item--tablet"><a class="navigation__link navigation__link--tablet" href="#" target="_blank"><span>About CH</span></a></li>
+                    <li class="navigation__item navigation__item--tablet"><a class="navigation__link navigation__link--tablet" href="#" target="_blank"><span>Stores & hours</span></a></li>
+                    <li class="navigation__item navigation__item--tablet"><a class="navigation__link navigation__link--tablet" href="#" target="_blank"><span>Contact Us</span></a></li>
+                  </ul>
+                  <a class="navigation__link navigation__link-login" href="#" target="_blank"><span>Login</span></a></li>
                   </div>
                 </div>
               </nav>
@@ -173,7 +182,7 @@
                     <a class="blog__link" href="#" target="_blank">Read Article</a>
                   </div>
                 </div>
-                <div class="blog__item">
+                <div class="blog__item blog__item--reverse">
                   <div class="blog__image">
                     <picture class="blog__picture">
                       <!--<source type="image/webp" srcset="img/blog-picture-2.webp, img/slider-picture-2@2x.webp 2x ">-->
@@ -202,19 +211,20 @@
                     <p class="blog__text">AW 19 trends</p>
                     <a class="blog__link" href="#" target="_blank">Read Article</a>
                   </div>
-                  <div class="blog__item-tablet">
-                    <div class="blog__image">
-                      <picture class="blog__picture">
-                        <!--<source type="image/webp" srcset="img/blog-picture-3.webp, img/slider-picture-3@2x.webp 2x ">-->
-                      <img class="blog__image-tablet" src="img/blog-picture-3.jpg" srcset="img/blog-picture-3@2x.jpg 2x" alt="фотография в блоге"  width="570" height="630"/>
-                      </picture>
-                        <!--width: 570, height: 630, for retina width: 1140, height: 1260-->
-                    </div>
-                    <div class="blog__information blog__information--tablet">
-                      <p class="blog__data">Septemer 16, 2019</p>
-                      <p class="blog__text">AW 19 trends</p>
-                      <a class="blog__link" href="#" target="_blank">Read Article</a>
-                    </div>
+
+              </div>
+              <div class="blog__item blog__item-tablet">
+                <div class="blog__image">
+                  <picture class="blog__picture">
+                    <!--<source type="image/webp" srcset="img/blog-picture-3.webp, img/slider-picture-3@2x.webp 2x ">-->
+                  <img class="blog__image" src="img/blog-picture-3.jpg" srcset="img/blog-picture-3@2x.jpg 2x" alt="фотография в блоге" width="285" height="300" />
+                  </picture>
+                    <!--width: 570, height: 600, for retina width: 1140, height: 1260-->
+                </div>
+                <div class="blog__information">
+                  <p class="blog__data">Septemer 16, 2019</p>
+                  <p class="blog__text">AW 19 trends</p>
+                  <a class="blog__link" href="#" target="_blank">Read Article</a>
                 </div>
               </div>
             </div>

@@ -144,3 +144,27 @@
 .slider__link--active span {
   color: $black;
 }
+
+@media (max-width: $max-tablet-width) {
+  .slider {
+    margin-bottom: 80px;
+  }
+
+  .slider__inner {
+    padding: 0;
+  }
+
+  .slider__wrapper {
+    overflow: hidden;
+  }
+
+  .slider__wrapper-inner {
+    grid-template-columns: 340px 340px 340px 340px;
+    grid-gap: 30px;
+    transform: translateX(4%);
+  }
+
+  .slider__link--tablet {
+    display: block;
+  }
+}

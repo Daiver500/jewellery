@@ -21,7 +21,7 @@
 }
 
 .header__image {
-  max-height: 463px;
+  min-height: 463px;
 }
 
 .header__information {
@@ -51,4 +51,14 @@
   margin: 0;
   text-align: center;
   font-style: italic;
+}
+
+@media (max-width: $max-tablet-width) {
+  .header::before {
+    display: none;
+  }
+
+  .header__image {
+    object-fit: cover;
+  }
 }
