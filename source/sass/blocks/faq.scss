@@ -3,7 +3,7 @@
 }
 
 .faq__inner {
-  max-width: 970px;
+  max-width: 973px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -25,7 +25,8 @@
 
 .faq__item {
   position: relative;
-  min-width: 830px;
+  min-width: 971px;
+  padding-left: 50px;
 }
 
 .faq__item:not(:last-child) {
@@ -38,9 +39,10 @@
   background-repeat: no-repeat;
   height: 1px;
   border: 1px solid $brown;
-  width: 970px;
+  width: 100%;
   bottom: -45px;
-  left: -51px;
+  left: 0;
+  right: 0;
 }
 
 .faq__table {
@@ -48,7 +50,7 @@
   grid-template-columns: 1fr;
   justify-items: left;
   position: relative;
-  padding-left: 50px;
+  //padding-left: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
   border: 2px solid $brown;
@@ -64,12 +66,13 @@
 
 .faq__text {
   margin: 0;
+  max-width: 520px;
 }
 
 .faq__button {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 60px;
   border: none;
   background-color: inherit;
   cursor: pointer;
@@ -85,19 +88,19 @@
 
 @media (max-width: $max-tablet-width) {
   .faq {
-    margin-bottom: 108px;
+    margin-bottom: 84px;
   }
 
   .faq__inner {
-    max-width: 700px;
+    max-width: 680px;
   }
 
   .faq__item {
-    min-width: 527px;
+    min-width: 678px;
   }
 
-  .faq__item:not(:last-child)::after {
-    width: 699px;
+  .faq__text {
+    max-width: 525px;
   }
 
   .faq__button,
@@ -108,6 +111,44 @@
 
   .faq__button {
     top: 0;
-    right: -60px;
+    right: 70px;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .faq {
+    margin-bottom: 70px;
+  }
+
+  .faq__inner {
+    max-width: 290px;
+  }
+
+  .faq__table {
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+
+  .faq__item {
+    min-width: 286px;
+    padding-left: 25px;
+    padding-right: 37px;
+  }
+
+  .faq__title {
+    max-width: 206px;
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+
+  .faq__text {
+    max-width: 240px;
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+
+  .faq__button {
+    top: 2px;
+    right: 19px;
   }
 }

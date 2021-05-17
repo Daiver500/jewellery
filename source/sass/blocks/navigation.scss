@@ -89,7 +89,8 @@
 .navigation__item--tablet,
 .navigation__input-tablet,
 .navigation__toggle,
-.navigation__menu-tablet {
+.navigation__menu-tablet,
+.navigation__link-login {
   display: none;
 }
 
@@ -98,6 +99,10 @@
   .navigation__login,
   .navigation__cart-desktop {
     display: none;
+  }
+
+  .navigation__link-login {
+    display: block;
   }
 
   .navigation__inner {

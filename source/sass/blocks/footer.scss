@@ -133,3 +133,39 @@
     bottom: -11px;
   }
 }
+
+@media (max-width: $max-mobile-width) {
+  .footer__inner {
+    max-width: 500px;
+    padding: 60px 15px;
+  }
+
+  .footer__information {
+    padding-right: 0;
+  }
+
+  .footer__text,
+  .footer__title {
+    padding-right: 43px;
+  }
+
+  .footer input {
+    min-width: 185px;
+  }
+
+  .footer__links {
+    grid-template-columns: 1fr;
+  }
+
+  .social {
+    display: flex;
+  }
+
+  .social__item:not(:last-child) {
+    padding-right: 30px;
+  }
+
+  .social__text {
+    display: none;
+  }
+}
