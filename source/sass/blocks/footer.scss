@@ -22,7 +22,7 @@
   bottom: 0;
   background-repeat: no-repeat;
   height: 1px;
-  width: 500px;
+  min-width: 500px;
   border: 1px solid $white;
 }
 
@@ -167,5 +167,9 @@
 
   .social__text {
     display: none;
+  }
+
+  .footer__information::after {
+    min-width: 290px;
   }
 }
