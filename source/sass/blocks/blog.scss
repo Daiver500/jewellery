@@ -168,12 +168,32 @@
     display: grid;
   }
 
-  .blog__item--reverse {
+  .blog__item--reverse .blog__information {
+    padding: 65px;
     grid-column-start: 1;
     grid-row-start: 1;
   }
+}
 
-  .blog__item--reverse .blog__information {
+@media (max-width: $max-mobile-width) {
+  .blog {
+    margin-bottom: 70px;
+  }
+
+  .blog__gallery {
+    justify-items: unset;
+  }
+
+  .blog__item {
+    min-width: 290px;
+    grid-template-columns: 1fr;
+  }
+
+  .blog__information {
     padding: 65px;
+  }
+
+  .blog__item--tablet {
+    padding: 15px;
   }
 }

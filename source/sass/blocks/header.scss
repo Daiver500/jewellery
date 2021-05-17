@@ -59,6 +59,23 @@
   }
 
   .header__image {
-    object-fit: cover;
+    object-fit: fill;
   }
+}
+
+@media (max-width: $max-mobile-width) {
+  .header {
+    margin-bottom: 70px;
+  }
+
+  .header__title {
+    font-size: 38px;
+    line-height: 49.4px;
+  }
+
+  .header__text {
+    font-size: 34px;
+    line-height: 44.2px;
+  }
+
 }
