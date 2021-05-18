@@ -168,6 +168,8 @@
   .modal__inner {
     width: 100%;
     padding: 45px 15px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .modal__title {
@@ -219,7 +221,6 @@
   .modal__buttons {
     flex-direction: column;
     align-items: center;
-    padding: 0 15px;
   }
 
   .modal__link {

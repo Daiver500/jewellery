@@ -47,7 +47,7 @@
   left: 45px;
   background-repeat: no-repeat;
   height: 1px;
-  width: 340px;
+  min-width: 340px;
   border: 1px solid $brown;
 }
 
@@ -120,6 +120,8 @@
   margin-top: 50px;
   margin-bottom: 34px;
   min-height: 68px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .login__button:hover,
@@ -174,26 +176,49 @@
 
 
 @media (max-width: $max-mobile-width) {
-  .modal__inner,
-  .modal-success__inner {
+  .login__inner,
+  .login-success__inner {
     width: 100%;
-    justify-content: center;
   }
 
-  .modal__data {
-    width: 300px;
-    padding: 10px;
+  .login__data::after,
+  .login__data::before {
+    min-width: 100%;
+    left: 15px;
+    padding-right: 15px;
   }
 
-  .modal__text {
-    margin-bottom: 51px;
-    font-size: 16px;
-    line-height: 22px;
-    max-width: 320px;
+  .login__data::before {
+    top: 147px;
   }
 
-  .modal__form input,
-  .modal__form textarea {
-    min-width: 280px;
+  .login__data::after {
+    top: 215px;
+  }
+
+  .login__form input {
+    min-width: 100%;
+  }
+
+  .login__data {
+    padding: 45px 15px;
+  }
+
+  .login__header {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+
+  .login__link span {
+    padding-right: 15px;
+  }
+
+  .login__button {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    min-width: 240px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
