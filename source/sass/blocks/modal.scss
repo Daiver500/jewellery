@@ -50,7 +50,7 @@
   margin-bottom: 60px;
 }
 
-.modal__data {
+.modal__info {
   padding-right: 165px;
   padding-left: 15px;
 }
@@ -128,7 +128,7 @@
   padding-bottom: 24px;
   background-color: $brown;
   cursor: pointer;
-  width: 200px;
+  min-width: 205px;
   max-height: 68px;
 }
 
@@ -166,7 +166,7 @@
 
 @media (max-width: $max-mobile-width) {
   .modal__inner {
-    width: 290px;
+    width: 100%;
     padding: 45px 15px;
   }
 
@@ -178,7 +178,6 @@
 
   .modal__item {
     margin-bottom: 15px;
-    min-width: 94px;
   }
 
   .modal__item,
@@ -187,8 +186,10 @@
     line-height: 20.8px;
   }
 
-  .modal__data {
-    padding-right: 50px;
+  .modal__info {
+    padding-right: 65px;
+    min-width: 94px;
+    text-align: left;
   }
 
   .modal__unit {
@@ -197,6 +198,7 @@
 
   .modal__information {
     margin-bottom: 55px;
+    justify-content: space-between;
   }
 
   .modal__text {
@@ -216,10 +218,12 @@
 
   .modal__buttons {
     flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
   }
 
   .modal__link {
-    min-width: 260px;
+    min-width: 100%;
   }
 
   .modal__link:not(:last-child) {

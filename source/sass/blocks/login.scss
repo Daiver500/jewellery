@@ -1,7 +1,7 @@
 .login__inner,
 .login-success__inner {
   display: flex;
-  width: 430px;
+  width: 442px;
   min-height: 586px;
   position: relative;
   top: calc(50% - 295px);
@@ -173,14 +173,7 @@
 }
 
 
-/*@media (max-width: $max-tablet-width) {
-  .modal,
-  .modal__inner,
-  .modal-success,
-  .modal-sucess__inner {
-    display: none;
-  }
-
+@media (max-width: $max-mobile-width) {
   .modal__inner,
   .modal-success__inner {
     width: 100%;
@@ -203,4 +196,4 @@
   .modal__form textarea {
     min-width: 280px;
   }
-}*/
+}
