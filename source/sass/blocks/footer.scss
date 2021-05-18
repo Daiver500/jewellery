@@ -134,15 +134,6 @@
     bottom: -11px;
   }
 
-  footer::before {
-    content: "";
-    position: absolute;
-    top: -135px;
-    background-repeat: no-repeat;
-    height: 1px;
-    border: 1px solid $borders;
-    width: 100%;
-  }
 }
 
 @media (max-width: $max-mobile-width) {
@@ -172,7 +163,7 @@
     display: flex;
   }
 
-  .footer__item:not(:last-child) {
+  .social__item:not(:last-child) {
     padding-right: 30px;
   }
 
@@ -184,7 +175,5 @@
     min-width: 290px;
   }
 
-  footer::before {
-    top: -115px;
-  }
+
 }

@@ -171,9 +171,6 @@
     padding: 0 45px;
   }
 
-  .catalog::after {
-    display: none;
-  }
 }
 
 @media (max-width: $max-mobile-width) {
@@ -188,5 +185,9 @@
 
   .catalog__item {
     text-align: center;
+  }
+
+  .catalog::after {
+    display: none;
   }
 }
