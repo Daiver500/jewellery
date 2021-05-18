@@ -179,13 +179,15 @@
   .login__inner,
   .login-success__inner {
     width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .login__data::after,
   .login__data::before {
-    min-width: 100%;
-    left: 15px;
-    padding-right: 15px;
+    min-width: 87%;
+    left: 5%;
+    right: 5%;
   }
 
   .login__data::before {
@@ -218,7 +220,5 @@
     margin-top: 40px;
     margin-bottom: 20px;
     min-width: 240px;
-    margin-left: 25px;
-    margin-right: 25px;
   }
 }
