@@ -311,3 +311,22 @@
 .hidden {
   display: none;
 }
+
+@media (max-width: $max-mobile-width) {
+  .filter-page__inner {
+    width: 270px;
+  }
+
+  .filter-page__buttons {
+    padding-left: 20px;
+    margin-bottom: 90px;
+  }
+
+  .filter-page__button {
+    width: 230px;
+  }
+
+  .catalog__form {
+    padding: 35px 0;
+  }
+}
