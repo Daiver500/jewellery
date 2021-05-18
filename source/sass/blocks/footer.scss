@@ -1,6 +1,7 @@
 .footer {
   background-color: $dark-black;
   color: $white;
+  position: relative;
 }
 
 .footer__inner {
@@ -131,6 +132,16 @@
 
   .footer__information::after {
     bottom: -11px;
+  }
+
+  footer::before {
+    content: "";
+    position: absolute;
+    top: -135px;
+    background-repeat: no-repeat;
+    height: 1px;
+    border: 1px solid $borders;
+    width: 100%;
   }
 }
 

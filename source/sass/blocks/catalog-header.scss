@@ -54,3 +54,12 @@
   font-style: italic;
 }
 
+@media (max-width: $max-tablet-width) {
+  .catalog-header::before {
+    display: none;
+  }
+
+  .catalog-header {
+    margin-bottom: 50px;
+  }
+}

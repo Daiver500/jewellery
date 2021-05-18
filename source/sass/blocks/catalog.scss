@@ -113,3 +113,57 @@
 .catalog__item-button:focus span {
   color: $black;
 }
+
+.catalog__button-header {
+  display: none;
+}
+
+@media (max-width: $max-tablet-width) {
+  .catalog__button-header {
+    display: block;
+    margin-bottom: 50px;
+    font-weight: 500;
+    color: $white;
+    background-color: $brown;
+    border: none;
+    max-height: 68px;
+    min-width: 88.5%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+
+  .catalog__button-header:hover,
+  .catalog__button-header:focus {
+    background-color: $white;
+    border: 1px solid $brown;
+  }
+
+  .catalog__button-header:hover span,
+  .catalog__button-header:focus span {
+    color: $black;
+  }
+
+  .catalog__button-header span {
+    color: $white;
+  }
+
+  .catalog__inner {
+    max-width: 88.5%;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .catalog__parts {
+    padding-left: 0;
+    grid-column-gap: 30px;
+  }
+
+  .catalog__up-filter-button {
+    padding: 0 45px;
+  }
+
+  .catalog::after {
+    display: none;
+  }
+}

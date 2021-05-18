@@ -174,3 +174,136 @@
   right: 0;
 }
 
+@media (max-width: $max-tablet-width) {
+  .catalog__filter {
+    display: none;
+  }
+
+  .filter-page__inner {
+    display: flex;
+    flex-direction: column;
+    width: 458px;
+    //min-height: 440px;
+    position: relative;
+    top: calc(50% - 295px);
+    right: 0;
+    left: 0;
+    bottom: auto;
+    margin: auto;
+    text-align: left;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    background-color: $white;
+    margin-top: 15px;
+  }
+
+  .filter-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: $white;
+  }
+
+  .filter-page__buttons {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    padding-left: 25px;
+    margin-bottom: 40px;
+  }
+
+  .filter-page__button {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border: none;
+    cursor: pointer;
+    color: $white;
+    background-color: $brown;
+    max-height: 68px;
+    width: 362px;
+  }
+
+  .filter-page__button--apply {
+    margin-bottom: 25px;
+  }
+
+  .filter-page__button--apply:hover,
+  .filter-page__button--apply:focus,
+  .filter-page__button--clear:hover,
+  .filter-page__button--clear:focus {
+    color: $black;
+    background-color: $white;
+    border: 1px solid $brown;
+  }
+
+  .catalog__form {
+    border: none;
+    position: relative;
+    padding: 25px 0;
+    margin-bottom: 0;
+  }
+
+  .catalog__title-filter {
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+
+  .filter-page__button-close {
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    top: -15px;
+    right: -20px;
+  }
+
+  .filter-page__button-close svg path {
+    color: $white;
+  }
+
+  .form__button {
+    top: -50px;
+    right: 44px;
+  }
+
+  .form__button svg {
+    width: 23px;
+    height: 12px;
+  }
+
+  .catalog__checkbox,
+  .catalog__rangebox {
+    position: relative;
+    padding-left: 25px;
+  }
+
+  .catalog__checkbox::after,
+  .catalog__rangebox::after {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    background-repeat: no-repeat;
+    height: 1px;
+    border: 1px solid $brown;
+    width: 100%;
+  }
+
+  .range__controls {
+    padding-top: 17px;
+  }
+
+  .range__toggle {
+    top: 11px;
+  }
+
+  .checkbox__text {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+}
