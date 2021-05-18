@@ -119,6 +119,14 @@
 }
 
 @media (max-width: $max-tablet-width) {
+  .catalog {
+    margin-bottom: 50px;
+  }
+
+  .catalog__list {
+    grid-column-gap: 30px;
+  }
+
   .catalog__button-header {
     display: block;
     margin-bottom: 50px;
@@ -165,5 +173,20 @@
 
   .catalog::after {
     display: none;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .catalog__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .catalog__up-filter-button {
+    padding: 0 15px;
+    margin-bottom: 40px;
+  }
+
+  .catalog__item {
+    text-align: center;
   }
 }
