@@ -87,6 +87,11 @@
   grid-gap: 57px;
 }
 
+.footer__link {
+  display: flex;
+  align-items: center;
+}
+
 .footer__list {
   list-style: none;
   padding-left: 0;
