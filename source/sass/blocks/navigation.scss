@@ -11,6 +11,8 @@
 .navigation__inner {
   padding-top: 30px;
   padding-bottom: 19px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .navigation__login-cart {
@@ -82,7 +84,7 @@
   color: $black;
 }
 
-.navigation__link--active {
+.navigation__link--active span {
   color: $red;
 }
 

@@ -109,6 +109,11 @@
   line-height: 18px;
 }
 
+.login__link span:hover,
+.login__link span:focus {
+  opacity: 0.5;
+}
+
 .login__button {
   font-weight: 500;
   color: $white;

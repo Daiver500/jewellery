@@ -39,6 +39,11 @@
   color: $black;
 }
 
+.slider__item:hover,
+.slider__item:focus {
+  opacity: 0.5;
+}
+
 .slider__link-title,
 .slider__link-title-card {
   font-weight: 500;
