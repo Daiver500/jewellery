@@ -167,6 +167,14 @@
   .slider__link--tablet {
     display: block;
   }
+
+  .slider__button--right {
+    right: 22px;
+  }
+
+  .slider__button--left {
+    left: 22px;
+  }
 }
 
 @media (max-width: $max-mobile-width) {
@@ -189,4 +197,5 @@
   .slider__buttons-mobile {
     display: block;
   }
+
 }

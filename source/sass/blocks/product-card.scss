@@ -28,6 +28,10 @@
   max-width: 1120px;
 }
 
+.card__images {
+  display: flex;
+}
+
 .card__pictures {
   display: flex;
   justify-content: space-around;
@@ -110,6 +114,7 @@
 .table__title {
   font-weight: 500;
   padding-bottom: 20px;
+  position: relative;
 }
 
 .table__title,
@@ -160,4 +165,136 @@
   font-size: 14px;
   line-height: 18.2px;
   color: $grey;
+}
+
+.table__title::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-repeat: no-repeat;
+  height: 1px;
+  border: 1px solid $borders;
+  min-width: 370px;
+}
+
+.card__link-mobile {
+  display: none;
+}
+
+@media (max-width: $max-tablet-width) {
+  .card::before,
+  .card::after {
+    display: none;
+  }
+
+  .card {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  .card__inner {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+
+  .card__images {
+    flex-direction: column-reverse;
+    padding-right: 40px;
+  }
+
+  .card__small-pictures {
+    flex-direction: row;
+    padding-right: 0;
+    max-width: 319px;
+  }
+
+  .card__small-picture {
+    margin-bottom: 0;
+    margin-top: 14px;
+  }
+
+  .card__big-picture {
+    padding-right: 0;
+  }
+
+  .card__big-picture img {
+    max-width: 319px;
+    max-height: 286px;
+  }
+
+  .card__small-picture:not(:last-child) {
+    padding-right: 15px;
+  }
+
+  .card__information {
+    min-width: 319px;
+  }
+
+  .table__title::after {
+    min-width: 319px;
+  }
+
+  .card__link {
+    max-width: 319px;
+    margin-bottom: 18px;
+  }
+
+  .card__details {
+    font-size: 12px;
+    line-height: 15.6px;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .card__link-mobile {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .card {
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+
+  .card__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card__images {
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .card__big-picture {
+    position: relative;
+  }
+
+  .card__pictures {
+    flex-direction: column;
+  }
+
+  .card__small-pictures {
+    display: none;
+  }
+
+  .card__information {
+    min-width: 290px;
+  }
+
+  .card__link {
+    margin-bottom: 15px;
+  }
+
+  .card__final-info {
+    max-width: 270px;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
