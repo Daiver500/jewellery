@@ -78,7 +78,7 @@ const navigationOpen = () => {
 navigationToggleClose.addEventListener(`click`, navigationClose);
 navigationToggleOpen.addEventListener(`click`, navigationOpen);
 
-// Подвал мобильная версия
+// FAQ
 
 const footerMapButtonOpen = document.querySelector(".map__button--open");
 const footerMapButtonClose = document.querySelector(".map__button--close");
@@ -137,41 +137,6 @@ footerMap.addEventListener("click", hideFooterContactsLists);
 if (footerContacts) {
 footerContacts.addEventListener("click", openCloseFooterMenu);
 footerContacts.addEventListener("click", hideFooterMapLists);
-}
-
-// Маска
-
-const phoneInput = document.querySelector(".form__main-phone");
-const modalPhone = document.querySelector(".modal__phone");
-const maxPhoneNumber = 16;
-
-let maskOptions = {
-  mask: '+{7}(000)000-00-00'
-};
-let formMask = IMask(phoneInput, maskOptions);
-let modalMask = IMask(modalPhone, maskOptions);
-
-const checkPhoneInput = () => {
-  if (phoneInput.value.length < maxPhoneNumber) {
-    phoneInput.setCustomValidity("Номер должен быть из 10 цифр");
-  } else {
-    phoneInput.setCustomValidity("");
-  }
-  phoneInput.reportValidity();
-};
-
-const checkModalPhoneInput = () => {
-  if (modalPhone.value.length < maxPhoneNumber) {
-    modalPhone.setCustomValidity("Номер должен быть из 10 цифр");
-  } else {
-    modalPhone.setCustomValidity("");
-  }
-  modalPhone.reportValidity();
-};
-
-if (phoneInput || modalPhone) {
-phoneInput.addEventListener("input", checkPhoneInput);
-modalPhone.addEventListener("input", checkModalPhoneInput);
 }
 
 
@@ -358,5 +323,34 @@ modalCheckbox.addEventListener("click", function () {
 });
 };
 checkboxClicker();
+
+// Слайдер
+
+const slides = document.querySelectorAll(".slide");
+const slide = document.querySelector(".slide");
+const buttonRight = document.querySelector(".slider__button--right");
+const buttonLeft = document.querySelector(".slider__button--left");
+const slidesField = document.querySelector(".slider__wrapperinner");
+width = window.getComputedStyle(slide).width;
+
+let offset = 0;
+
+buttonRight.addEventListener("click", () => {
+  if (offset === +width.slice(0, width.length - 2) * (slides.length - 2)) {
+    offset = 0;
+  } else {
+    offset += +width.slice(0, width.length - 2);
+  }
+  slidesField.style.transform = `translateX(-${offset}px )`
+})
+
+buttonLeft.addEventListener("click", () => {
+  if (offset === 0) {
+    offset = +width.slice(0, width.length - 2) * (slides.length - 2)
+  } else {
+    offset -= +width.slice(0, width.length - 2);
+  }
+  slidesField.style.transform = `translateX(+${offset}px )`
+})
 
 })();
