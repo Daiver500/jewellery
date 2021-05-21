@@ -183,6 +183,7 @@ const faqMaterialsText = document.getElementById("materials-text");
 const faqCountriesText = document.getElementById("countries-text");
 const faqPaymentsText = document.getElementById("payments-text");
 const faqReturnsText = document.getElementById("returns-text");
+const faqTitles = document.querySelectorAll(".faq__title");
 
 faqTexts.forEach((item) => {
   if(!item.classList.contains("faq__text--active")) {
@@ -255,6 +256,7 @@ faqButtons.forEach((item) => {
   item.addEventListener("click", faqWindowClickHandler);
 });
 
+
 // Слайдер
 const mobileSlider = window.matchMedia("(max-width: 1023px)");
 const slides = document.querySelectorAll(".slider__item");
@@ -265,7 +267,9 @@ const slidesField = document.querySelector(".slider__wrapper-inner");
 
 let offset = 0;
 
+if (slidesField) {
 width = window.getComputedStyle(slidesField).width;
+
 buttonRight.addEventListener("click", () => {
   if (offset === +width.slice(0, width.length - 2) * (slides.length - 3)) {
     offset = 0;
@@ -283,4 +287,49 @@ buttonLeft.addEventListener("click", () => {
   }
   slidesField.style.transform = `translateX(+${offset}px )`;
 });
+}
+
+// Меню
+
+const navigationToggle = document.querySelector(".navigation__toggle");
+const navigationMenu = document.querySelector(".navigation__menu");
+const navigationInput = document.querySelector(".navigation__input-tablet");
+const navigationInner = document.querySelector(".navigation__inner");
+const navigationLogo = document.getElementById("logo");
+const navigationCart = document.querySelector(".navigation__cart-mobile");
+const navigationUpperPart = document.querySelector(".navigation__upper-part");
+const mediaQuery = window.matchMedia("(max-width: 1023px)");
+
+if (mediaQuery.matches) {
+navigationMenu.classList.add("hidden");
+navigationInput.classList.add("hidden");
+navigationInner.style.background = "white";
+navigationInner.style.paddingBottom = "0";
+navigationToggle.classList.add("navigation__toggle--active");
+navigationCart.classList.add("navigation__cart-mobile--active");
+navigationLogo.style.color = "#a87b62";
+navigationUpperPart.style.marginBottom = "20px";
+}
+
+/*navigationButtons.forEach((button) => {
+  button.addEventListener(`click`, navigationButtonClickHandler)
+});
+
+const navigationClose = () => {
+  navigationMenu.classList.add(`hidden`);
+  document.body.classList.remove(`noscroll`)
+  navigationToggleClose.classList.add(`hidden`);
+  navigationToggleOpen.classList.remove(`hidden`);
+}
+
+const navigationOpen = () => {
+  navigationMenu.classList.remove(`hidden`);
+  document.body.classList.add(`noscroll`)
+  navigationToggleClose.classList.remove(`hidden`);
+  navigationToggleOpen.classList.add(`hidden`);
+}
+
+navigationToggleClose.addEventListener(`click`, navigationClose);
+navigationToggleOpen.addEventListener(`click`, navigationOpen);*/
+
 })();

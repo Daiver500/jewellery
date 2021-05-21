@@ -118,7 +118,18 @@
   .navigation__login-cart {
     padding-top: 0;
     width: 18px;
-    height: 16px;
+    height: 18px;
+  }
+
+  .navigation__cart-mobile {
+    background-image: url("../img/shop-icon-opened-menu.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 18px;
+  }
+
+  .navigation__cart-mobile--active {
+    background-image: url("../img/shop-icon.svg");
   }
 
   .navigation__login-cart,
@@ -130,6 +141,7 @@
     width: 16px;
     height: 16px;
     background-image: url("../img/search-icon-tablet.svg");
+    background-repeat: no-repeat;
     left: 58px;
     top: 92px;
   }
@@ -176,6 +188,12 @@
     height: 18px;
     padding: 0;
     cursor: pointer;
+    background-image: url("../img/burger-menu-opened.svg");
+    background-repeat: no-repeat;
+  }
+
+  .navigation__toggle--active {
+    background-image: url("../img/burger-menu-closed.svg");
   }
 
   .navigation__logo svg {
@@ -225,6 +243,10 @@
 
   .navigation__link--tablet span {
     color: $menu-tablet;
+  }
+
+  .hidden {
+    display: none;
   }
 }
 
