@@ -16,8 +16,7 @@ const openModalButton = document.querySelector(".card__link");
 const closeModalButton = document.querySelector(".modal__close");
 const modalWrapper = document.querySelector(".modal");
 const modalInner = document.querySelector(".modal__inner");
-const faqButtons = document.querySelectorAll(".faq__buttons");
-const faqTexts = document.querySelectorAll(".faq__text");
+
 
 // Хэндлеры на открытие и закрытие окон по клику на область и по кнопке
 
@@ -164,23 +163,91 @@ const inputFocus = () => {
 
 // FAQ
 
+const faqTable = document.querySelector(".faq__table");
+const faqTexts = document.querySelectorAll(".faq__text");
+const faqText = document.querySelector(".faq__text");
+const faqButtons = document.querySelectorAll(".faq__buttons");
+const faqButton = document.querySelector(".faq__buttons");
+const upDownButtons = document.querySelectorAll(".faq__button");
+const faqButtonsUp = document.querySelectorAll(".faq__button-up");
+const faqButtonsDown = document.querySelectorAll(".faq__button-down");
+const faqButtonUp = document.querySelector(".faq__button-up");
+const faqButtonDown = document.querySelector(".faq__button-down");
+
+
 faqTexts.forEach((item) => {
-  if (!item.classList.contains("faq__text--active")) {
+  if(!item.classList.contains("faq__text--active")) {
     item.classList.add("hidden");
+  } else {
+    item.classList.remove("hidden");
   }
 });
 
-const faqButtonHandler = () => {
-  faqButtons.forEach((item) => {
-    if (!item.classList.contains("faq__button--active")) {
-      item.classList.add("hidden");
-    }
-  });
+const setActiveText = () => {
+faqTexts.forEach((item) => {
+  if(!item.classList.contains("faq__text--active")) {
+    item.classList.add("hidden");
+  } else {
+    item.classList.remove("hidden");
+  }
+ });
+};
+
+const setActiveButton = (evt) => {
+   if(evt.target.classList.contains("faq__button--active")) {
+    evt.target.classList.remove("faq__button--active");
+   } else {
+    evt.target.classList.add("faq__button--active");
+   }
+};
+
+const faqMaterialsText = document.getElementById("materials-text");
+const faqCountriesText = document.getElementById("countries-text");
+const faqPaymentsText = document.getElementById("payments-text");
+const faqReturnsText = document.getElementById("returns-text");
+
+const clickFaqMaterialsButtons = () => {
+  faqMaterialsText.classList.toggle("faq__text--active");
+};
+
+const clickFaqCountriesButtons = () => {
+  faqCountriesText.classList.toggle("faq__text--active");
+};
+
+const clickFaqPaymentsButtons = () => {
+  faqPaymentsText.classList.toggle("faq__text--active");
+};
+
+const clickFaqReturnsButtons = () => {
+  faqReturnsText.classList.toggle("faq__text--active");
+};
+
+
+const faqWindowClickHandler = (evt) => {
+    switch (evt.target.id) {
+    case "materials":
+      clickFaqMaterialsButtons();
+      setActiveText();
+      break;
+    case "countries":
+      clickFaqCountriesButtons();
+      setActiveText();
+      break;
+    case "payments":
+      clickFaqPaymentsButtons();
+      setActiveText();
+      break;
+    case "returns":
+      clickFaqReturnsButtons();
+      setActiveText();
+    break;
+    default:
+  }
 };
 
 
 faqButtons.forEach((item) => {
-  item.addEventListener("click", faqButtonHandler);
+  item.addEventListener("click", setActiveButton);
+  item.addEventListener("click", faqWindowClickHandler);
 });
-
 })();

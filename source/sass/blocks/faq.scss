@@ -82,6 +82,7 @@
   width: 17px;
   height: 10px;
   padding: 0;
+  background-image: url("../../img/down-button.svg");
 }
 
 .faq__buttons:hover,
@@ -89,9 +90,16 @@
   opacity: 0.5;
 }
 
-.faq__text--active,
-.faq__button--active {
+.faq__text--active {
   display: block;
+}
+
+.faq__button--active {
+  background-image: url("../../img/up-button.svg");
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: $max-tablet-width) {
