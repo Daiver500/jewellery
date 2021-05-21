@@ -177,13 +177,18 @@ const inputFocus = () => {
 
 // FAQ
 
+const faqTitles = document.querySelectorAll(".faq__title");
 const faqTexts = document.querySelectorAll(".faq__text");
-const faqButtons = document.querySelectorAll(".faq__buttons");
 const faqMaterialsText = document.getElementById("materials-text");
 const faqCountriesText = document.getElementById("countries-text");
 const faqPaymentsText = document.getElementById("payments-text");
 const faqReturnsText = document.getElementById("returns-text");
-const faqTitles = document.querySelectorAll(".faq__title");
+const faqMaterialsButton = document.getElementById("materials");
+const faqCountriesButton = document.getElementById("countries");
+const faqPaymentsButton = document.getElementById("payments");
+const faqReturnsButton = document.getElementById("returns");
+
+
 
 faqTexts.forEach((item) => {
   if(!item.classList.contains("faq__text--active")) {
@@ -203,47 +208,51 @@ faqTexts.forEach((item) => {
  });
 };
 
-const setActiveButton = (evt) => {
+/*const setActiveButton = (evt) => {
    if(evt.target.classList.contains("faq__button--active")) {
     evt.target.classList.remove("faq__button--active");
    } else {
     evt.target.classList.add("faq__button--active");
    }
 };
-
+*/
 
 const clickFaqMaterialsButtons = () => {
   faqMaterialsText.classList.toggle("faq__text--active");
+  faqMaterialsButton.classList.toggle("faq__button--active");
 };
 
 const clickFaqCountriesButtons = () => {
   faqCountriesText.classList.toggle("faq__text--active");
+  faqCountriesButton.classList.toggle("faq__button--active");
 };
 
 const clickFaqPaymentsButtons = () => {
   faqPaymentsText.classList.toggle("faq__text--active");
+  faqPaymentsButton.classList.toggle("faq__button--active");
 };
 
 const clickFaqReturnsButtons = () => {
   faqReturnsText.classList.toggle("faq__text--active");
+  faqReturnsButton.classList.toggle("faq__button--active");
 };
 
 
 const faqWindowClickHandler = (evt) => {
     switch (evt.target.id) {
-    case "materials":
+    case "materials-title":
       clickFaqMaterialsButtons();
       setActiveText();
       break;
-    case "countries":
+    case "countries-title":
       clickFaqCountriesButtons();
       setActiveText();
       break;
-    case "payments":
+    case "payments-title":
       clickFaqPaymentsButtons();
       setActiveText();
       break;
-    case "returns":
+    case "returns-title":
       clickFaqReturnsButtons();
       setActiveText();
     break;
@@ -251,8 +260,7 @@ const faqWindowClickHandler = (evt) => {
   }
 };
 
-faqButtons.forEach((item) => {
-  item.addEventListener("click", setActiveButton);
+faqTitles.forEach((item) => {
   item.addEventListener("click", faqWindowClickHandler);
 });
 
@@ -331,5 +339,7 @@ const navigationOpen = () => {
 
 navigationToggleClose.addEventListener(`click`, navigationClose);
 navigationToggleOpen.addEventListener(`click`, navigationOpen);*/
+
+// Фильтр
 
 })();

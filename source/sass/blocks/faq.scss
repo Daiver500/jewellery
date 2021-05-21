@@ -65,6 +65,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 23.4px;
+  cursor: pointer;
 }
 
 .faq__text {
@@ -84,6 +85,7 @@
   padding: 0;
   background-image: url("../img/down-button.svg");
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .faq__buttons:hover,
@@ -159,6 +161,6 @@
 
   .faq__buttons {
     top: 2px;
-    right: 19px;
+    right: 35px;
   }
 }
