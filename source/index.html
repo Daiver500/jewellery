@@ -85,11 +85,12 @@
               <li class="navigation__item navigation__item--tablet"><a class="navigation__link navigation__link--tablet"
                   href="#" target="_blank"><span>Contact Us</span></a></li>
             </ul>
-            <a class="navigation__link navigation__link-login" href="#" target="_blank"><span>Login</span></a></li>
+            <a class="navigation__link navigation__link-login" href="#" target="_blank"><span>Login</span></a>
           </div>
         </div>
+        </div>
     </nav>
-  </header>
+   </header>
   <main class="main">
     <section class="header">
       <div class="header__inner container">
@@ -161,6 +162,7 @@
             </div>
             <div class="slider__item">
               <a class="slider__link" href="product-card.html" target="_blank" aria-label="карточка товара">
+                <picture class="slider__picture">
                 <source type="image/webp" srcset="img/slider-picture-3.webp, img/slider-picture-3@2x.webp 2x ">
                 <img class="slider__image" src="img/slider-picture-3.jpg" srcset="img/slider-picture-3@2x.jpg 2x"
                   alt="ювелирное изделие" width="270" height="284" />
@@ -277,6 +279,7 @@
               <a class="blog__link" href="#" target="_blank">Read Article</a>
             </div>
           </div>
+        </div>
         </div>
     </section>
     <section class="faq">
@@ -483,7 +486,6 @@
             alt="фотография в галлере" width="430" height="138" />
           <!--width: 430, height: 138, for retina width: 860, height: 276-->
         </picture>
-        </picture>
       </div>
       <form class="login__form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="login__data">
@@ -496,8 +498,7 @@
           </label>
           <button class="login__button" type="submit">Log In</button>
           <p class="login__text">Don’t have an account? <span class="login__sign-up-text">Sign Up</span></p>
-        </div>
-    </div>
+       </div>
     </form>
     <button class="login__close" type="button" aria-label="Закрыть модальное окно">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,12 +507,12 @@
           fill="#1D1613" />
       </svg>
     </button>
-    </div>
+  </div>
   </section>
   <section class="login-success hidden">
     <div class="login-success__inner">
       <div class="login-success__title">
-        <p class="login-success__text">Форма успешно отправлена, спасибо</p>
+        <p class="login-success__text">Вы успешно зашли!</p>
       </div>
       <button class="login-success__close" type="button" aria-label="Закрыть модальное окно">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
