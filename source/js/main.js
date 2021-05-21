@@ -20,6 +20,7 @@ const modalInner = document.querySelector(".modal__inner");
 
 // Хэндлеры на открытие и закрытие окон по клику на область и по кнопке
 
+
 const escPressHandler = (evt) => {
   if (evt.key === `Escape`) {
     closeLogin();
@@ -28,6 +29,8 @@ const escPressHandler = (evt) => {
     evt.preventDefault();
   }
 };
+
+
 
 const windowClickHandler = (evt) => {
   if (evt.target === loginWrapper || evt.target === loginSuccessWrapper || evt.target === modalWrapper) {
@@ -52,6 +55,7 @@ if (modalWrapper) {
 
 const openLogin = (evt) => {
   evt.preventDefault();
+  if (loginWrapper || closeLoginButton || loginForm) {
   loginWrapper.classList.remove("hidden");
   document.body.style.overflow = "hidden";
   inputFocus();
@@ -59,15 +63,18 @@ const openLogin = (evt) => {
   loginWrapper.addEventListener("click", windowClickHandler);
   document.addEventListener("keydown", escPressHandler);
   loginForm.addEventListener("submit", formSendingHandler);
+  }
 };
 
 const closeLogin = () => {
+  if (loginWrapper || closeLoginButton || loginForm) {
   loginWrapper.classList.add("hidden");
   document.body.style.overflow = "";
   closeLoginButton.removeEventListener("click", closeLogin);
   loginWrapper.removeEventListener("click", windowClickHandler);
   document.removeEventListener("keydown", escPressHandler);
   loginForm.removeEventListener("submit", formSendingHandler);
+  }
 };
 
 if (openLoginButton) {
@@ -79,19 +86,23 @@ if (closeLoginButton) {
 closeLoginButton.addEventListener("click", closeLogin);
 }
 
-const openLoginSuccess = (evt) => {
+const openLoginSuccess = () => {
+  if (loginWrapper || loginSuccessWrapper || closeLoginSuccessButton) {
   loginWrapper.classList.add("hidden");
   loginSuccessWrapper.classList.remove("hidden");
   loginSuccessWrapper.addEventListener("click", windowClickHandler);
   document.addEventListener("keydown", escPressHandler);
   closeLoginSuccessButton.addEventListener("click", closeLoginSuccess);
+  }
 };
 
 const closeLoginSuccess = () => {
+  if (loginSuccessWrapper || closeLoginSuccessButton) {
   loginSuccessWrapper.classList.add("hidden");
   loginSuccessWrapper.removeEventListener("click", windowClickHandler);
   document.removeEventListener("keydown", escPressHandler);
   closeLoginSuccessButton.removeEventListener("click", closeLoginSuccess);
+ }
 };
 
 if (closeLoginSuccessButton) {
@@ -111,25 +122,28 @@ const formSendingHandler = (evt) => {
 
 const openModal = (evt) => {
   evt.preventDefault();
+  if (modalWrapper || closeModalButton) {
   modalWrapper.classList.remove("hidden");
   document.body.style.overflow = "hidden";
   closeModalButton.addEventListener("click", closeModal);
   modalWrapper.addEventListener("click", windowClickHandler);
   document.addEventListener("keydown", escPressHandler);
+  }
 };
 
 const closeModal = () => {
+  if (modalWrapper || closeModalButton) {
   modalWrapper.classList.add("hidden");
   document.body.style.overflow = "";
   closeModalButton.removeEventListener("click", closeLogin);
   modalWrapper.removeEventListener("click", windowClickHandler);
   document.removeEventListener("keydown", escPressHandler);
+  }
 };
 
 if (openModalButton) {
 openModalButton.addEventListener("click", openModal);
 }
-
 
 if (closeModalButton) {
 closeModalButton.addEventListener("click", closeModal);
@@ -163,17 +177,12 @@ const inputFocus = () => {
 
 // FAQ
 
-const faqTable = document.querySelector(".faq__table");
 const faqTexts = document.querySelectorAll(".faq__text");
-const faqText = document.querySelector(".faq__text");
 const faqButtons = document.querySelectorAll(".faq__buttons");
-const faqButton = document.querySelector(".faq__buttons");
-const upDownButtons = document.querySelectorAll(".faq__button");
-const faqButtonsUp = document.querySelectorAll(".faq__button-up");
-const faqButtonsDown = document.querySelectorAll(".faq__button-down");
-const faqButtonUp = document.querySelector(".faq__button-up");
-const faqButtonDown = document.querySelector(".faq__button-down");
-
+const faqMaterialsText = document.getElementById("materials-text");
+const faqCountriesText = document.getElementById("countries-text");
+const faqPaymentsText = document.getElementById("payments-text");
+const faqReturnsText = document.getElementById("returns-text");
 
 faqTexts.forEach((item) => {
   if(!item.classList.contains("faq__text--active")) {
@@ -201,10 +210,6 @@ const setActiveButton = (evt) => {
    }
 };
 
-const faqMaterialsText = document.getElementById("materials-text");
-const faqCountriesText = document.getElementById("countries-text");
-const faqPaymentsText = document.getElementById("payments-text");
-const faqReturnsText = document.getElementById("returns-text");
 
 const clickFaqMaterialsButtons = () => {
   faqMaterialsText.classList.toggle("faq__text--active");
@@ -245,9 +250,37 @@ const faqWindowClickHandler = (evt) => {
   }
 };
 
-
 faqButtons.forEach((item) => {
   item.addEventListener("click", setActiveButton);
   item.addEventListener("click", faqWindowClickHandler);
+});
+
+// Слайдер
+const mobileSlider = window.matchMedia("(max-width: 1023px)");
+const slides = document.querySelectorAll(".slider__item");
+//const slide = document.querySelector(".slider__item");
+const buttonRight = document.querySelector(".slider__button--right");
+const buttonLeft = document.querySelector(".slider__button--left");
+const slidesField = document.querySelector(".slider__wrapper-inner");
+
+let offset = 0;
+
+width = window.getComputedStyle(slidesField).width;
+buttonRight.addEventListener("click", () => {
+  if (offset === +width.slice(0, width.length - 2) * (slides.length - 3)) {
+    offset = 0;
+  } else {
+    offset += +width.slice(0, width.length - 2);
+  }
+  slidesField.style.transform = `translateX(-${offset}px )`;
+});
+
+buttonLeft.addEventListener("click", () => {
+  if (offset === 0) {
+    offset = +width.slice(0, width.length - 2) * (slides.length - 3);
+  } else {
+    offset -= +width.slice(0, width.length - 2);
+  }
+  slidesField.style.transform = `translateX(+${offset}px )`;
 });
 })();
