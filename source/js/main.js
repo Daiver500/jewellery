@@ -16,10 +16,8 @@ const openModalButton = document.querySelector(".card__link");
 const closeModalButton = document.querySelector(".modal__close");
 const modalWrapper = document.querySelector(".modal");
 const modalInner = document.querySelector(".modal__inner");
-const faqButtonsUp = document.querySelectorAll(".faq__button-up");
-const faqButtonsDown = document.querySelectorAll(".faq__button-down");
+const faqButtons = document.querySelectorAll(".faq__buttons");
 const faqTexts = document.querySelectorAll(".faq__text");
-const faqButtons = document.querySelectorAll(".faq__button");
 
 // Хэндлеры на открытие и закрытие окон по клику на область и по кнопке
 
@@ -167,43 +165,22 @@ const inputFocus = () => {
 // FAQ
 
 faqTexts.forEach((item) => {
-  item.classList.add("hidden");
+  if (!item.classList.contains("faq__text--active")) {
+    item.classList.add("hidden");
+  }
 });
 
-faqButtonsUp.forEach((item) => {
-  item.classList.add("hidden");
-});
-
-faqButtonsDown.forEach((item) => {
-  item.classList.remove("hidden");
-});
-
-const openFaq = () => {
-  faqTexts.forEach((item) => {
-    if (item.classList.contains("hidden")) {
-      item.classList.remove("hidden");
-    } else {
-      item.classList.add("hidden");
-    }
-  });
-  faqButtonsUp.forEach((item) => {
-    if (item.classList.contains("hidden")) {
-      item.classList.remove("hidden");
-    } else {
-      item.classList.add("hidden");
-    }
-  });
-  faqButtonsDown.forEach((item) => {
-    if (item.classList.contains("hidden")) {
-      item.classList.remove("hidden");
-    } else {
+const faqButtonHandler = () => {
+  faqButtons.forEach((item) => {
+    if (!item.classList.contains("faq__button--active")) {
       item.classList.add("hidden");
     }
   });
 };
 
+
 faqButtons.forEach((item) => {
-  item.addEventListener("click", openFaq);
+  item.addEventListener("click", faqButtonHandler);
 });
 
 })();
