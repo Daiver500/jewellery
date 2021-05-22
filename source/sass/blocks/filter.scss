@@ -4,15 +4,17 @@
 
 .catalog__form {
   border: 1px solid $brown;
-  padding: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 35px;
-  padding-bottom: 0;
+  min-width: 250px;
 }
 
 
 .catalog__title-filter {
   font-weight: 500;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .checkbox__text {
@@ -77,10 +79,28 @@
 
 .catalog__checkbox {
   border: none;
-  padding: 0;
   margin-left: 0;
   margin-right: 0;
   position: relative;
+}
+
+.catalog__checkbox,
+.catalog__rangebox {
+  padding-left: 25px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+.catalog__checkbox::after {
+  content: "";
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  background-repeat: no-repeat;
+  height: 1px;
+  border: 1px solid $brown;
+  width: 100%;
 }
 
 .checkbox__form {
@@ -170,13 +190,34 @@
   border: none;
   background-color: inherit;
   position: absolute;
-  top: -50px;
-  right: 0;
+  top: 0;
+  right: 30px;
+  background-image: url("../img/down-button.svg");
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.checkbox__form--active {
+  display: block;
+}
+
+.form__button--active {
+  background-image: url("../img/up-button.svg");
 }
 
 @media (max-width: $max-tablet-width) {
+  .filter__page {
+    position: fixed;
+  }
+
   .catalog__filter {
     display: none;
+  }
+
+  .catalog__filter--active {
+    display: block;
   }
 
   .filter-page__inner {
@@ -267,7 +308,6 @@
   }
 
   .form__button {
-    top: -50px;
     right: 44px;
   }
 

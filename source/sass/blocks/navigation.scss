@@ -248,6 +248,23 @@
   .hidden {
     display: none;
   }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .navigation__inner--open {
+    background-color: $brown;
+    padding-bottom: 80px;
+  }
+
+  .navigation__logo--open {
+    color: $brown;
+  }
+
+  .navigation__upper-part--open {
+    margin-bottom: 95px;
+  }
 }
 
 @media (max-width: $max-mobile-width) {

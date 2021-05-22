@@ -308,38 +308,135 @@ const navigationCart = document.querySelector(".navigation__cart-mobile");
 const navigationUpperPart = document.querySelector(".navigation__upper-part");
 const mediaQuery = window.matchMedia("(max-width: 1023px)");
 
+const navigationOpen = () => {
+  navigationMenu.classList.toggle(`hidden`);
+  navigationInput.classList.toggle("hidden");
+  document.body.classList.toggle(`no-scroll`);
+  navigationToggle.classList.toggle("navigation__toggle--active");
+  navigationCart.classList.toggle("navigation__cart-mobile--active");
+  if (mediaQuery.matches && !navigationMenu.classList.contains("hidden")) {
+    navigationInner.style.background = "#a87b62";
+    navigationInner.style.paddingBottom = "80px";
+    navigationLogo.style.color = "white";
+    navigationUpperPart.style.marginBottom = "95px";
+  } else {
+    navigationInner.style.background = "white";
+    navigationInner.style.paddingBottom = "0";
+    navigationLogo.style.color = "#a87b62";
+    navigationUpperPart.style.marginBottom = "20px";
+  }
+};
+
 if (mediaQuery.matches) {
 navigationMenu.classList.add("hidden");
 navigationInput.classList.add("hidden");
-navigationInner.style.background = "white";
-navigationInner.style.paddingBottom = "0";
 navigationToggle.classList.add("navigation__toggle--active");
 navigationCart.classList.add("navigation__cart-mobile--active");
+navigationInner.style.background = "white";
+navigationInner.style.paddingBottom = "0";
 navigationLogo.style.color = "#a87b62";
 navigationUpperPart.style.marginBottom = "20px";
 }
 
-/*navigationButtons.forEach((button) => {
-  button.addEventListener(`click`, navigationButtonClickHandler)
-});
+navigationToggle.addEventListener(`click`, navigationOpen);
 
-const navigationClose = () => {
-  navigationMenu.classList.add(`hidden`);
-  document.body.classList.remove(`noscroll`)
-  navigationToggleClose.classList.add(`hidden`);
-  navigationToggleOpen.classList.remove(`hidden`);
-}
-
-const navigationOpen = () => {
-  navigationMenu.classList.remove(`hidden`);
-  document.body.classList.add(`noscroll`)
-  navigationToggleClose.classList.remove(`hidden`);
-  navigationToggleOpen.classList.add(`hidden`);
-}
-
-navigationToggleClose.addEventListener(`click`, navigationClose);
-navigationToggleOpen.addEventListener(`click`, navigationOpen);*/
 
 // Фильтр
+
+const filterCheckboxes = document.querySelectorAll(".checkbox__form");
+const filterTitles = document.querySelectorAll(".catalog__title-filter");
+const catalogRangebox = document.querySelector(".range");
+const filterProductCheckbox = document.getElementById("product-checkbox");
+const filterMaterialCheckbox = document.getElementById("material-checkbox");
+const filterCollectionCheckbox = document.getElementById("collection-checkbox");
+const filterPriceCheckbox = document.getElementById("price-checkbox");
+const filterProductsButton = document.getElementById("product-button");
+const filterMaterialButton = document.getElementById("material-button");
+const filterCollectionButton = document.getElementById("collection-button");
+const filterPriceButton = document.getElementById("price-button");
+const filterOpenButton = document.querySelector(".catalog__button-header");
+const filterMobile = document.querySelector(".filter-page");
+
+
+const openFilter = (evt) => {
+  filterMobile.classList.remove("hidden");
+  evt.preventDefault();
+};
+
+filterOpenButton.addEventListener("click", openFilter);
+
+filterCheckboxes.forEach((item) => {
+  if(!item.classList.contains("checkbox__form--active")) {
+    item.classList.add("hidden");
+  } else {
+    item.classList.remove("hidden");
+  }
+});
+
+const setActiveCheckbox = () => {
+  filterCheckboxes.forEach((item) => {
+  if(!item.classList.contains("checkbox__form--active")) {
+    item.classList.add("hidden");
+  } else {
+    item.classList.remove("hidden");
+  }
+ });
+};
+
+const setActiveRangebox = () => {
+  if(!catalogRangebox.classList.contains("checkbox__form--active")) {
+    catalogRangebox.classList.add("hidden");
+  } else {
+    catalogRangebox.classList.remove("hidden");
+  }
+}
+
+
+const clickProductButton = () => {
+  filterProductCheckbox.classList.toggle("checkbox__form--active");
+  filterProductsButton.classList.toggle("form__button--active");
+};
+
+const clickMaterialButton = () => {
+  filterMaterialCheckbox.classList.toggle("checkbox__form--active");
+  filterMaterialButton.classList.toggle("form__button--active");
+};
+
+const clickCollectionButton = () => {
+  filterCollectionCheckbox.classList.toggle("checkbox__form--active");
+  filterCollectionButton.classList.toggle("form__button--active");
+};
+
+const clickPriceButton = () => {
+  filterPriceCheckbox.classList.toggle("checkbox__form--active");
+  filterPriceButton.classList.toggle("form__button--active");
+};
+
+
+const filterWindowClickHandler = (evt) => {
+    switch (evt.target.id) {
+    case "product":
+      clickProductButton();
+      setActiveCheckbox();
+      break;
+    case "material":
+      clickMaterialButton();
+      setActiveCheckbox();
+      break;
+    case "collection":
+      clickCollectionButton();
+      setActiveCheckbox();
+      break;
+    case "price":
+      clickPriceButton();
+      setActiveRangebox();
+    break;
+    default:
+  }
+};
+
+filterTitles.forEach((item) => {
+  item.addEventListener("click", filterWindowClickHandler);
+});
 
 })();
