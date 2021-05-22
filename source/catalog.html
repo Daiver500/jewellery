@@ -82,15 +82,15 @@
                 <div class="catalog__filter filter">
                   <div class="catalog__form form">
                       <h2 class="visually-hidden">Фильтр</h2>
+                      <button class="catalog__filter-button-close" aria-label="закрыть фильтр">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="16" cy="16" r="16" fill="#1D1613"/>
+                          <path d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z" fill="white"/>
+                          </svg>
 
+                      </button>
                       <form action="https://echo.htmlacademy.ru/" method="get">
-                          <button class="catalog__filter-button-close hidden" aria-label="закрыть фильтр">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="16" cy="16" r="16" fill="#1D1613"/>
-                              <path d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z" fill="white"/>
-                              </svg>
 
-                          </button>
                           <fieldset class="catalog__checkbox checkbox">
                               <div id="product" class="catalog__title-filter">Product</div>
                               <ul id="product-checkbox" class="checkbox__form checkbox__form--active">
@@ -205,6 +205,7 @@
                     <button class="filter__button filter__button--clear" type="submit">Clear All</button>
                   </div>
                   </div>
+
                   <div class="catalog__parts">
                       <ul class="catalog__list">
                             <li class="catalog__item">
@@ -452,9 +453,10 @@
           <div class="login__inner">
             <div class="login__image">
               <picture class="login__picture">
-                  <source type="image/webp" srcset="img/login-picture.webp, img/login-picture@2x.webp 2x ">
-                <img src="img/login-picture.jpg" srcset="img/login-picture@2x.jpg 2x" alt="фотография в галлере"  width="430" height="138"/>
-                  <!--width: 430, height: 138, for retina width: 860, height: 276-->
+                <source type="image/webp" srcset="img/login-picture.webp, img/login-picture@2x.webp 2x ">
+                <img class="login__image" src="img/login-picture.jpg" srcset="img/login-picture@2x.jpg 2x"
+                  alt="фотография в галлере" width="430" height="138" />
+                <!--width: 430, height: 138, for retina width: 860, height: 276-->
               </picture>
             </div>
             <form class="login__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -465,168 +467,35 @@
                 </label>
                 <label> <span class="visually-hidden">Password</span>
                   <input class="login__password" type="password" name="password" placeholder="Password" required="">
-                  </label>
-                <a class="login__link" href="#" target="_blank">Forgot your password?</a>
-
+                </label>
                 <button class="login__button" type="submit">Log In</button>
                 <p class="login__text">Don’t have an account? <span class="login__sign-up-text">Sign Up</span></p>
-
-                </div>
-              </div>
-            </form>
-            <button class="login__close" type="button" aria-label="Закрыть модальное окно">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z" fill="currentColor"/>
-                </svg>
-            </button>
-          </div>
+             </div>
+          </form>
+          <button class="login__close" type="button" aria-label="Закрыть модальное окно">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z"
+                fill="#1D1613" />
+            </svg>
+          </button>
+        </div>
         </section>
         <section class="login-success hidden">
           <div class="login-success__inner">
             <div class="login-success__title">
-              <p class="login-success__text">Вы успешно зашли</p>
+              <p class="login-success__text">Вы успешно зашли!</p>
             </div>
             <button class="login-success__close" type="button" aria-label="Закрыть модальное окно">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z" fill="currentColor"/>
-                </svg>
+                <path
+                  d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z"
+                  fill="#1D1613" />
+              </svg>
             </button>
           </div>
         </section>
-        <section class="catalog hidden">
-          <div class="catalog__up-filter-button container">
-          <a href="filter.html" class="catalog__button-header" type="button" target="_blank"><span>Filter</span></a>
-          </div>
-          <div class="catalog__inner container">
-              <div class="catalog__filter filter">
-                <div class="catalog__form form">
-                    <h2 class="visually-hidden">Фильтр</h2>
-
-                    <form action="https://echo.htmlacademy.ru/" method="get">
-                        <button class="catalog__filter-button-close hidden" aria-label="закрыть фильтр">
-                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="16" cy="16" r="16" fill="#1D1613"/>
-                            <path d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z" fill="white"/>
-                            </svg>
-
-                        </button>
-                        <fieldset class="catalog__checkbox checkbox">
-                            <div id="product" class="catalog__title-filter">Product</div>
-                            <ul id="product-checkbox" class="checkbox__form checkbox__form--active">
-                                <li class="checkbox__line">
-                                    <label class="checkbox__label checkbox__text">
-                                        <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                                        <span class="checkbox__box" tabindex="0"></span>
-                                       Necklaces
-                                    </label>
-                                </li>
-                                <li class="checkbox__line">
-                                  <label class="checkbox__label checkbox__text">
-                                      <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                                      <span class="checkbox__box" tabindex="0"></span>
-                                      Chockers
-                                  </label>
-                               </li>
-                               <li class="checkbox__line">
-                                <label class="checkbox__label checkbox__text">
-                                    <input class="checkbox__input" type="checkbox" name="Slider" />
-                                    <span class="checkbox__box" tabindex="0"></span>
-                                    Rings
-                                </label>
-                               </li>
-                               <li class="checkbox__line">
-                                <label class="checkbox__label checkbox__text">
-                                    <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                                    <span class="checkbox__box" tabindex="0"></span>
-                                    Earrings
-                                </label>
-                               </li>
-                              </ul>
-                              <button id="product-button" class="form__button form__button--active" type="button" aria-label="кнопка открыть-закрыть">
-
-                              </button>
-                        </fieldset>
-                        <fieldset class="catalog__checkbox checkbox">
-                          <div id="material" class="catalog__title-filter">Material</div>
-                          <ul id="material-checkbox" class="checkbox__form">
-                              <li class="checkbox__line">
-                                  <label class="checkbox__label checkbox__text">
-                                      <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                                      <span class="checkbox__box" tabindex="0"></span>
-                                     Gold
-                                  </label>
-                              </li>
-                              <li class="checkbox__line">
-                                <label class="checkbox__label checkbox__text">
-                                    <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                                    <span class="checkbox__box" tabindex="0"></span>
-                                    Silver
-                                </label>
-                             </li>
-
-
-                          </ul>
-                          <button id="material-button" class="form__button" type="button" aria-label="кнопка открыть-закрыть">
-
-                          </button>
-                      </fieldset>
-                      <fieldset class="catalog__checkbox checkbox">
-                        <div id="collection"  class="catalog__title-filter">Collection</div>
-                        <ul id="collection-checkbox" class="checkbox__form">
-                            <li class="checkbox__line">
-                                <label class="checkbox__label checkbox__text">
-                                    <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                                    <span class="checkbox__box" tabindex="0"></span>
-                                   Pink Flamingo
-                                </label>
-                            </li>
-                            <li class="checkbox__line">
-                              <label class="checkbox__label checkbox__text">
-                                  <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                                  <span class="checkbox__box" tabindex="0"></span>
-                                  Dreams
-                              </label>
-                           </li>
-
-
-                        </ul>
-                        <button id="collection-button" class="form__button" type="button" aria-label="кнопка открыть-закрыть">
-
-                        </button>
-                    </fieldset>
-                        <fieldset class="catalog__rangebox">
-                          <div id="price" class="catalog__title-filter">Price</div>
-                          <div id="price-checkbox" class="catalog__range range checkbox__form--active">
-                              <div class="range__controls">
-                                  <div class="range__scale">
-                                      <div class="range__bar"></div>
-                                  </div>
-                                  <div class="range__toggle range__toggle--min" tabindex="0">
-                                    <p class="range__text">$55</p>
-                                  </div>
-
-                                  <div class="range__toggle range__toggle--max" tabindex="0">
-                                    <p class="range__text">$155</p>
-                                  </div>
-
-                              </div>
-                            </div>
-                          <button id="price-button" class="form__button form__button--active" type="button" aria-label="кнопка открыть-закрыть">
-
-                          </button>
-                      </fieldset>
-
-                    </form>
-
-                </div>
-                <div class="filter__buttons">
-                  <button class="filter__button filter__button--apply" type="submit">Apply</button>
-                  <button class="filter__button filter__button--clear" type="submit">Clear All</button>
-                </div>
-                </div>
-              </section>
-
-        <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
       </body>
 </html>
 

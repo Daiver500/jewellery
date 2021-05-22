@@ -207,18 +207,81 @@
   background-image: url("../img/up-button.svg");
 }
 
+.catalog__filter-button-close {
+  display: none;
+}
+
 @media (max-width: $max-tablet-width) {
-  .filter__page {
-    position: fixed;
-  }
-
   .catalog__filter {
-    display: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: $white;
+    flex-direction: column;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    min-width: 458px;
+    margin-bottom: 30px;
   }
 
-  .catalog__filter--active {
+  .catalog__filter-button-close {
     display: block;
+    border: none;
+    position: absolute;
+    top: -31px;
+    right: -16px;
+    background-color: transparent;
+    cursor: pointer;
   }
+
+  .catalog__form {
+    display: flex;
+    flex-direction: column;
+    width: 458px;
+    //min-height: 440px;
+    position: relative;
+    top: calc(50% - 295px);
+    right: 0;
+    left: 0;
+    bottom: auto;
+    margin: auto;
+    text-align: left;
+    z-index: 2;
+    background-color: $white;
+    margin-top: 15px;
+    border: none;
+    padding: 25px 0;
+    margin-bottom: 0;
+  }
+
+  .filter__buttons {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    padding-left: 25px;
+    margin-bottom: 40px;
+  }
+
+  .filter__button {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border: none;
+    cursor: pointer;
+    color: $white;
+    background-color: $brown;
+    max-height: 68px;
+    width: 362px;
+  }
+
+  .filter__button--apply {
+    margin-bottom: 25px;
+  }
+
 
   .filter-page__inner {
     display: flex;
@@ -281,13 +344,6 @@
     color: $black;
     background-color: $white;
     border: 1px solid $brown;
-  }
-
-  .catalog__form {
-    border: none;
-    position: relative;
-    padding: 25px 0;
-    margin-bottom: 0;
   }
 
   .catalog__title-filter {
@@ -368,5 +424,18 @@
 
   .catalog__form {
     padding: 35px 0;
+    width: 290px;
+  }
+
+  .catalog__filter {
+    min-width: 290px;
+  }
+
+  .filter__buttons {
+    padding-left: 15px;
+  }
+
+  .filter__button {
+    width: 260px;
   }
 }

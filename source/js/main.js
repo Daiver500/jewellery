@@ -16,6 +16,7 @@ const openModalButton = document.querySelector(".card__link");
 const closeModalButton = document.querySelector(".modal__close");
 const modalWrapper = document.querySelector(".modal");
 const modalInner = document.querySelector(".modal__inner");
+const openLoginMobile = document.querySelector(".navigation__link-login");
 
 
 // Хэндлеры на открытие и закрытие окон по клику на область и по кнопке
@@ -85,6 +86,11 @@ openLoginButton.addEventListener("click", openLogin);
 if (closeLoginButton) {
 closeLoginButton.addEventListener("click", closeLogin);
 }
+
+if (openLoginMobile) {
+  openLoginMobile.addEventListener("click", openLogin);
+}
+
 
 const openLoginSuccess = () => {
   if (loginWrapper || loginSuccessWrapper || closeLoginSuccessButton) {
@@ -207,15 +213,6 @@ faqTexts.forEach((item) => {
   }
  });
 };
-
-/*const setActiveButton = (evt) => {
-   if(evt.target.classList.contains("faq__button--active")) {
-    evt.target.classList.remove("faq__button--active");
-   } else {
-    evt.target.classList.add("faq__button--active");
-   }
-};
-*/
 
 const clickFaqMaterialsButtons = () => {
   faqMaterialsText.classList.toggle("faq__text--active");
@@ -354,16 +351,30 @@ const filterProductsButton = document.getElementById("product-button");
 const filterMaterialButton = document.getElementById("material-button");
 const filterCollectionButton = document.getElementById("collection-button");
 const filterPriceButton = document.getElementById("price-button");
+const catalogFilter = document.querySelector(".catalog__filter");
 const filterOpenButton = document.querySelector(".catalog__button-header");
-const filterMobile = document.querySelector(".filter-page");
+const filterCloseButton = document.querySelector(".catalog__filter-button-close");
 
+if (mediaQuery.matches) {
+  catalogFilter.classList.add("hidden");
+}
 
 const openFilter = (evt) => {
-  filterMobile.classList.remove("hidden");
+  catalogFilter.classList.remove("hidden");
   evt.preventDefault();
 };
 
+const closeFilter = () => {
+  catalogFilter.classList.add("hidden");
+};
+
+if (filterOpenButton) {
 filterOpenButton.addEventListener("click", openFilter);
+}
+
+if (filterCloseButton) {
+filterCloseButton.addEventListener("click", closeFilter);
+}
 
 filterCheckboxes.forEach((item) => {
   if(!item.classList.contains("checkbox__form--active")) {
