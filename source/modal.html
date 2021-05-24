@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>Сайт о ювелирных изделиях</title>
-    <meta name="description" content="Ювелирные изделия" />
-    <meta name="keywords" content="кольца, ожерелья, серьги" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preload" href="css/style.min.css" as="style" />
-    <link rel="preload" href="fonts/poppins-regular.woff" as="font" />
-    <link rel="preload" href="fonts/cormorant-garamond-600.woff2" as="font" />
-    <link rel="stylesheet" href="css/style.min.css" />
-   </head>
-    <body class="page">
-<section class="modal">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Сайт о ювелирных изделиях</title>
+  <meta name="description" content="Ювелирные изделия" />
+  <meta name="keywords" content="кольца, ожерелья, серьги" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" href="css/style.min.css" as="style" />
+  <link rel="preload" href="fonts/poppins-regular.woff" as="font" />
+  <link rel="preload" href="fonts/cormorant-garamond-600.woff2" as="font" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body class="page">
+  <section class="modal">
     <div class="modal__inner">
-     <div class="modal__header">
-       <h2 class="modal__title">The item was added to your cart</h2>
-     </div>
-     <div class="modal__information">
-       <div class="modal__image">
-       <picture class="modal__picture">
-<source type="image/webp" srcset="img/modal-picture.webp, img/modal-picture@2x.webp 2x ">
-<img  src="img/modal-picture.jpg" srcset="img/modal-picture@2x.jpg 2x" alt="фотография в галлере"  width="84" height="79"/>
-<!--width: 84, height: 79, for retina width: 168, height: 158-->
-       </picture>
-       </div>
-     <div class="modal__info">
-       <p class="modal__item">Gold Necklace </p>
-       <p class="modal__price">$ 115</p>
-     </div>
-     <div class="modal__quantity">
-       <button class="modal__plus" type="button" aria-label="добавить"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 6.125H14V7.875H0V6.125Z" fill="currentColor"/>
-        <path d="M6.125 14V0H7.875V14H6.125Z" fill="currentColor"/>
-        </svg></button>
-       <p class="modal__unit">1</p>
-       <button class="modal__minus" type="button" aria-label="удалить"><svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0H14V2H0V0Z" fill="currentColor"/>
-        </svg>
-        </button>
-       </div>
-     </div>
-     <div class="modal__text">
-       <div class="modal__text-inner"><p class="modal__text-price">You have 1 item in the cart</p></div>
-       <div class="modal__text-inner"><p class="modal__text-cart">Cart subtotal: $ 115</p></div>
-     </div>
-     <div class="modal__buttons">
-     <a class="modal__link" href="catalog.html"><span>Continue Shopping</span></a>
-     <a class="modal__link" href="#"><span>Checkout</span></a>
-     </div>
+      <div class="modal__header">
+        <h2 class="modal__title">The item was added to your cart</h2>
+      </div>
+      <div class="modal__information">
+        <div class="modal__image">
+          <picture class="modal__picture">
+            <source type="image/webp" srcset="img/modal-picture.webp, img/modal-picture@2x.webp 2x ">
+            <img src="img/modal-picture.jpg" srcset="img/modal-picture@2x.jpg 2x" alt="фотография в галлере" width="84"
+              height="79" />
+            <!--width: 84, height: 79, for retina width: 168, height: 158-->
+          </picture>
+        </div>
+        <div class="modal__info">
+          <p class="modal__item">Gold Necklace </p>
+          <p class="modal__price">$ 115</p>
+        </div>
+        <div class="modal__quantity">
+          <button class="modal__plus" type="button" aria-label="добавить"><svg width="14" height="14"
+              viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 6.125H14V7.875H0V6.125Z" fill="currentColor" />
+              <path d="M6.125 14V0H7.875V14H6.125Z" fill="currentColor" />
+            </svg></button>
+          <p class="modal__unit">1</p>
+          <button class="modal__minus" type="button" aria-label="удалить"><svg width="14" height="2" viewBox="0 0 14 2"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0H14V2H0V0Z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal__text">
+        <div class="modal__text-inner">
+          <p class="modal__text-price">You have 1 item in the cart</p>
+        </div>
+        <div class="modal__text-inner">
+          <p class="modal__text-cart">Cart subtotal: $ 115</p>
+        </div>
+      </div>
+      <div class="modal__buttons">
+        <a class="modal__link" href="catalog.html"><span>Continue Shopping</span></a>
+        <a class="modal__link" href="#"><span>Checkout</span></a>
+      </div>
       <button class="modal__close" type="button" aria-label="Закрыть модальное окно">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z" fill="currentColor"/>
-          </svg>
+          <path
+            d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z"
+            fill="currentColor" />
+        </svg>
       </button>
     </div>
   </section>
   <script src="js/main.js"></script>
 </body>
+
 </html>

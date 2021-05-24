@@ -216,22 +216,22 @@ faqTexts.forEach((item) => {
 
 const clickFaqMaterialsButtons = () => {
   faqMaterialsText.classList.toggle("faq__text--active");
-  faqMaterialsButton.classList.toggle("faq__button--active");
+  faqMaterialsButton.classList.toggle("faq__buttons--active");
 };
 
 const clickFaqCountriesButtons = () => {
   faqCountriesText.classList.toggle("faq__text--active");
-  faqCountriesButton.classList.toggle("faq__button--active");
+  faqCountriesButton.classList.toggle("faq__buttons--active");
 };
 
 const clickFaqPaymentsButtons = () => {
   faqPaymentsText.classList.toggle("faq__text--active");
-  faqPaymentsButton.classList.toggle("faq__button--active");
+  faqPaymentsButton.classList.toggle("faq__buttons--active");
 };
 
 const clickFaqReturnsButtons = () => {
   faqReturnsText.classList.toggle("faq__text--active");
-  faqReturnsButton.classList.toggle("faq__button--active");
+  faqReturnsButton.classList.toggle("faq__buttons--active");
 };
 
 

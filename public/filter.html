@@ -1,152 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8" />
-    <title>Сайт о ювелирных изделиях</title>
-    <meta name="description" content="Ювелирные изделия" />
-    <meta name="keywords" content="кольца, ожерелья, серьги" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preload" href="css/style.min.css" as="style" />
-    <link rel="preload" href="fonts/poppins-regular.woff" as="font" />
-    <link rel="preload" href="fonts/cormorant-garamond-600.woff2" as="font" />
-    <link rel="stylesheet" href="css/style.min.css" />
-   </head>
+<head>
+  <meta charset="utf-8">
+  <title>Сайт о ювелирных изделиях</title>
+  <meta name="description" content="Ювелирные изделия">
+  <meta name="keywords" content="кольца, ожерелья, серьги">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/poppins-regular.woff" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-600.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
 <body class="page">
   <section class="filter-page catalog">
     <div class="filter-page__inner">
-           <div class="catalog__form form">
-            <h2 class="visually-hidden">Фильтр</h2>
-            <button class="filter-page__button-close" type="button" aria-label="закрыть фильтр">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="16" r="16" fill="currentColor"/>
-                <path d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z" fill="currentColor"/>
-                </svg>
+      <div class="catalog__form form">
+        <h2 class="visually-hidden">Фильтр</h2>
+        <button class="filter-page__button-close" type="button" aria-label="закрыть фильтр">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="16" fill="currentColor"></circle>
+            <path d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z" fill="currentColor"></path>
+          </svg>
+        </button>
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <button class="catalog__filter-button-close hidden" aria-label="закрыть фильтр">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="16" fill="#1D1613"></circle>
+              <path d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z" fill="white"></path>
+            </svg>
+          </button>
+          <fieldset class="catalog__checkbox checkbox">
+            <div id="product" class="catalog__title-filter">Product</div>
+            <ul id="product-checkbox" class="checkbox__form checkbox__form--active">
+              <li class="checkbox__line">
+                <label class="checkbox__label checkbox__text">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <span class="checkbox__box" tabindex="0"></span>
+                  Necklaces
+                </label>
+              </li>
+              <li class="checkbox__line">
+                <label class="checkbox__label checkbox__text">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <span class="checkbox__box" tabindex="0"></span>
+                  Chockers
+                </label>
+              </li>
+              <li class="checkbox__line">
+                <label class="checkbox__label checkbox__text">
+                  <input class="checkbox__input" type="checkbox" name="Slider">
+                  <span class="checkbox__box" tabindex="0"></span>
+                  Rings
+                </label>
+              </li>
+              <li class="checkbox__line">
+                <label class="checkbox__label checkbox__text">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <span class="checkbox__box" tabindex="0"></span>
+                  Earrings
+                </label>
+              </li>
+            </ul>
+            <button id="product-button" class="form__button form__button--active" type="button" aria-label="кнопка открыть-закрыть">
             </button>
-            <form action="https://echo.htmlacademy.ru/" method="get">
-                <button class="catalog__filter-button-close hidden" aria-label="закрыть фильтр">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="16" cy="16" r="16" fill="#1D1613"/>
-                    <path d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z" fill="white"/>
-                    </svg>
-
-                </button>
-                <fieldset class="catalog__checkbox checkbox">
-                    <div id="product" class="catalog__title-filter">Product</div>
-                    <ul id="product-checkbox" class="checkbox__form checkbox__form--active">
-                        <li class="checkbox__line">
-                            <label class="checkbox__label checkbox__text">
-                                <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                                <span class="checkbox__box" tabindex="0"></span>
-                               Necklaces
-                            </label>
-                        </li>
-                        <li class="checkbox__line">
-                          <label class="checkbox__label checkbox__text">
-                              <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                              <span class="checkbox__box" tabindex="0"></span>
-                              Chockers
-                          </label>
-                       </li>
-                       <li class="checkbox__line">
-                        <label class="checkbox__label checkbox__text">
-                            <input class="checkbox__input" type="checkbox" name="Slider" />
-                            <span class="checkbox__box" tabindex="0"></span>
-                            Rings
-                        </label>
-                       </li>
-                       <li class="checkbox__line">
-                        <label class="checkbox__label checkbox__text">
-                            <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                            <span class="checkbox__box" tabindex="0"></span>
-                            Earrings
-                        </label>
-                       </li>
-
-                    </ul>
-                    <button id="product-button" class="form__button form__button--active" type="button" aria-label="кнопка открыть-закрыть">
-
-                    </button>
-                </fieldset>
-                <fieldset class="catalog__checkbox checkbox">
-                  <div id="material" class="catalog__title-filter">Material</div>
-                  <ul id="material-checkbox" class="checkbox__form">
-                      <li class="checkbox__line">
-                          <label class="checkbox__label checkbox__text">
-                              <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                              <span class="checkbox__box" tabindex="0"></span>
-                             Gold
-                          </label>
-                      </li>
-                      <li class="checkbox__line">
-                        <label class="checkbox__label checkbox__text">
-                            <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                            <span class="checkbox__box" tabindex="0"></span>
-                            Silver
-                        </label>
-                     </li>
-
-
-                  </ul>
-                  <button id="material-button" class="form__button" type="button" aria-label="кнопка открыть-закрыть">
-
-                  </button>
-              </fieldset>
-              <fieldset class="catalog__checkbox checkbox">
-                <div id="collection" class="catalog__title-filter">Collection</div>
-                <ul id="collection-checkbox" class="checkbox__form">
-                    <li class="checkbox__line">
-                        <label class="checkbox__label checkbox__text">
-                            <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                            <span class="checkbox__box" tabindex="0"></span>
-                           Pink Flamingo
-                        </label>
-                    </li>
-                    <li class="checkbox__line">
-                      <label class="checkbox__label checkbox__text">
-                          <input class="checkbox__input" type="checkbox" name="Slider" checked />
-                          <span class="checkbox__box" tabindex="0"></span>
-                          Dreams
-                      </label>
-                   </li>
-
-
-                </ul>
-                <button id="collection-button" class="form__button" type="button" aria-label="кнопка открыть-закрыть">
-
-                </button>
-            </fieldset>
-                <fieldset class="catalog__rangebox">
-                  <div id="price" class="catalog__title-filter">Price</div>
-                  <div id="price-checkbox" class="catalog__range range checkbox__form--active">
-                      <div class="range__controls">
-                          <div class="range__scale">
-                              <div class="range__bar"></div>
-                          </div>
-                          <div class="range__toggle range__toggle--min" tabindex="0">
-                            <p class="range__text">$55</p>
-                          </div>
-
-                          <div class="range__toggle range__toggle--max" tabindex="0">
-                            <p class="range__text">$155</p>
-                          </div>
-
-                      </div>
-                    </div>
-                  <button id="checkbox-button" class="form__button form__button--active" type="button" aria-label="кнопка открыть-закрыть">
-
-                  </button>
-              </fieldset>
-
-            </form>
-
-        </div>
-        <div class="filter-page__buttons">
-          <button class="filter-page__button filter-page__button--apply" type="submit">Apply</button>
-          <button class="filter-page__button filter-page__button--clear" type="submit">Clear All</button>
-        </div>
-        </div>
+          </fieldset>
+          <fieldset class="catalog__checkbox checkbox">
+            <div id="material" class="catalog__title-filter">Material</div>
+            <ul id="material-checkbox" class="checkbox__form">
+              <li class="checkbox__line">
+                <label class="checkbox__label checkbox__text">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <span class="checkbox__box" tabindex="0"></span>
+                  Gold
+                </label>
+              </li>
+              <li class="checkbox__line">
+                <label class="checkbox__label checkbox__text">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <span class="checkbox__box" tabindex="0"></span>
+                  Silver
+                </label>
+              </li>
+            </ul>
+            <button id="material-button" class="form__button" type="button" aria-label="кнопка открыть-закрыть">
+            </button>
+          </fieldset>
+          <fieldset class="catalog__checkbox checkbox">
+            <div id="collection" class="catalog__title-filter">Collection</div>
+            <ul id="collection-checkbox" class="checkbox__form">
+              <li class="checkbox__line">
+                <label class="checkbox__label checkbox__text">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <span class="checkbox__box" tabindex="0"></span>
+                  Pink Flamingo
+                </label>
+              </li>
+              <li class="checkbox__line">
+                <label class="checkbox__label checkbox__text">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <span class="checkbox__box" tabindex="0"></span>
+                  Dreams
+                </label>
+              </li>
+            </ul>
+            <button id="collection-button" class="form__button" type="button" aria-label="кнопка открыть-закрыть">
+            </button>
+          </fieldset>
+          <fieldset class="catalog__rangebox">
+            <div id="price" class="catalog__title-filter">Price</div>
+            <div id="price-checkbox" class="catalog__range range checkbox__form--active">
+              <div class="range__controls">
+                <div class="range__scale">
+                  <div class="range__bar"></div>
+                </div>
+                <div class="range__toggle range__toggle--min" tabindex="0">
+                  <p class="range__text">$55</p>
+                </div>
+                <div class="range__toggle range__toggle--max" tabindex="0">
+                  <p class="range__text">$155</p>
+                </div>
+              </div>
+            </div>
+            <button id="checkbox-button" class="form__button form__button--active" type="button" aria-label="кнопка открыть-закрыть">
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="filter-page__buttons">
+        <button class="filter-page__button filter-page__button--apply" type="submit">Apply</button>
+        <button class="filter-page__button filter-page__button--clear" type="submit">Clear All</button>
+      </div>
+    </div>
   </section>
   <script src="js/main.js"></script>
-  </body>
-  </html>
+</body>
+
+</html>
