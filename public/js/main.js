@@ -31,8 +31,6 @@ const escPressHandler = (evt) => {
   }
 };
 
-
-
 const windowClickHandler = (evt) => {
   if (evt.target === loginWrapper || evt.target === loginSuccessWrapper || evt.target === modalWrapper) {
     console.log(evt.target);
@@ -265,7 +263,6 @@ faqTitles.forEach((item) => {
 // Слайдер
 const mobileSlider = window.matchMedia("(max-width: 1023px)");
 const slides = document.querySelectorAll(".slider__item");
-//const slide = document.querySelector(".slider__item");
 const buttonRight = document.querySelector(".slider__button--right");
 const buttonLeft = document.querySelector(".slider__button--left");
 const slidesField = document.querySelector(".slider__wrapper-inner");
@@ -294,6 +291,7 @@ buttonLeft.addEventListener("click", () => {
 });
 }
 
+
 // Меню
 
 const navigationToggle = document.querySelector(".navigation__toggle");
@@ -303,7 +301,9 @@ const navigationInner = document.querySelector(".navigation__inner");
 const navigationLogo = document.getElementById("logo");
 const navigationCart = document.querySelector(".navigation__cart-mobile");
 const navigationUpperPart = document.querySelector(".navigation__upper-part");
+const navigationUpperPartCatalog = document.querySelector(".navigation__upper-part-catalog");
 const mediaQuery = window.matchMedia("(max-width: 1023px)");
+const mediaQueryMobile = window.matchMedia("(max-width: 767px)");
 
 const navigationOpen = () => {
   navigationMenu.classList.toggle(`hidden`);
@@ -320,7 +320,7 @@ const navigationOpen = () => {
     navigationInner.style.background = "white";
     navigationInner.style.paddingBottom = "0";
     navigationLogo.style.color = "#a87b62";
-    navigationUpperPart.style.marginBottom = "20px";
+    navigationUpperPart.style.marginBottom = "25px";
   }
 };
 
@@ -332,7 +332,12 @@ navigationCart.classList.add("navigation__cart-mobile--active");
 navigationInner.style.background = "white";
 navigationInner.style.paddingBottom = "0";
 navigationLogo.style.color = "#a87b62";
-navigationUpperPart.style.marginBottom = "20px";
+navigationUpperPart.style.marginBottom = "25px";
+}
+
+if (mediaQueryMobile.matches) {
+  navigationUpperPart.style.marginBottom = "15px";
+  navigationUpperPartCatalog.style.marginBottom = "-7px";
 }
 
 navigationToggle.addEventListener(`click`, navigationOpen);
