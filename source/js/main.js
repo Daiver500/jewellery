@@ -337,6 +337,9 @@ navigationUpperPart.style.marginBottom = "25px";
 
 if (mediaQueryMobile.matches) {
   navigationUpperPart.style.marginBottom = "15px";
+}
+
+if (mediaQueryMobile.matches && navigationUpperPartCatalog) {
   navigationUpperPartCatalog.style.marginBottom = "-7px";
 }
 
