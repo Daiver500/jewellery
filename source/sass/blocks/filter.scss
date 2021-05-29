@@ -4,8 +4,8 @@
 
 .catalog__form {
   border: 1px solid $brown;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 21px;
+  padding-bottom: 0;
   margin-bottom: 35px;
   min-width: 250px;
 }
@@ -13,7 +13,7 @@
 
 .catalog__title-filter {
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
   cursor: pointer;
 }
 
@@ -33,7 +33,7 @@
 
 .catalog__range {
   width: 200px;
-  margin-bottom: 54px;
+  margin-bottom: 14px;
 }
 
 .range__controls {
@@ -42,7 +42,7 @@
   background-color: $white;
   border-radius: 5px;
   margin-bottom: 17px;
-  padding-top: 39px;
+  padding-top: 6px;
 }
 
 .range__scale {
@@ -59,7 +59,7 @@
 
 .range__toggle {
   position: absolute;
-  top: 33px;
+  top: 0;
   left: 0;
   width: 15px;
   height: 15px;
@@ -74,7 +74,7 @@
 }
 
 .range__toggle--max {
-  left: 70%;
+  left: 76%;
 }
 
 .catalog__checkbox {
@@ -82,20 +82,22 @@
   margin-left: 0;
   margin-right: 0;
   position: relative;
+  padding-bottom: 20px;
 }
 
 .catalog__checkbox,
 .catalog__rangebox {
   padding-left: 25px;
-  padding-top: 0;
+}
+
+.catalog__checkbox:first-child {
   padding-bottom: 0;
-  padding-right: 0;
 }
 
 .catalog__checkbox::after {
   content: "";
   position: absolute;
-  bottom: 18px;
+  bottom: 19px;
   left: 0;
   background-repeat: no-repeat;
   height: 1px;
@@ -112,11 +114,11 @@
 }
 
 .checkbox__line {
-  padding-bottom: 15px;
+  padding-bottom: 11px;
 }
 
 .checkbox__label {
-  padding-left: 20px;
+  padding-left: 37px;
   position: relative;
   cursor: pointer;
 }
@@ -134,7 +136,7 @@
   margin-left: 0;
   background-image: url("../img/chekbox-not-checked.svg");
   background-repeat: no-repeat;
-  left: 0;
+  left: 8px;
   top: 2px;
 }
 
@@ -174,7 +176,7 @@
 }
 
 .filter__button--apply {
-  margin-bottom: 25px;
+  margin-bottom: 13px;
 }
 
 .filter__button--apply:hover,

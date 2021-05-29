@@ -2,21 +2,21 @@
   display: flex;
   max-width: 1366px;
   justify-content: space-between;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 132px;
+  padding-right: 77px;
   position: relative;
-  margin-bottom: 37px;
+  margin-bottom: 32px;
 }
 
 .navigation__inner {
   padding-top: 30px;
-  padding-bottom: 19px;
+  padding-bottom: 10px;
   padding-left: 0;
   padding-right: 0;
 }
 
 .navigation__login-cart {
-  padding-top: 17px;
+  padding-top: 11px;
   grid-template-columns: 1fr 1fr;
   display: grid;
   grid-gap: 35px;
@@ -36,14 +36,14 @@
   border: none;
   max-width: 145px;
   max-height: 20px;
-  margin-top: 17px;
+  margin-top: 11px;
 }
 
 .navigation__upper-part::before {
   content: "";
   position: absolute;
-  left: 80px;
-  top: 20px;
+  left: 105px;
+  top: 15px;
   background-repeat: no-repeat;
   width: 14px;
   height: 14px;
@@ -55,6 +55,10 @@
   color: $brown;
 }
 
+.navigation__logo {
+  padding-right: 54px;
+}
+
 .navigation__menu {
   justify-content: center;
   display: flex;
@@ -63,15 +67,14 @@
 .navigation__list {
   list-style: none;
   margin: 0;
-  padding-left: 0;
   display: grid;
   grid-template-columns: 1fr min-content min-content min-content min-content;
-  max-width: 495px;
   grid-gap: 35px;
   justify-items: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  padding-left: 110px;
 }
 
 .navigation__link:hover,
@@ -96,11 +99,19 @@
   display: none;
 }
 
+.navigation__item:not(:last-child) {
+  padding-right: 10px;
+}
+
 @media (max-width: $max-tablet-width) {
   .navigation__input,
   .navigation__login,
   .navigation__cart-desktop {
     display: none;
+  }
+
+  .navigation__logo {
+    padding-right: 8px;
   }
 
   .navigation__link-login {
@@ -170,8 +181,8 @@
 
   .navigation__upper-part {
     max-width: 1023px;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 46px;
+    padding-right: 46px;
     margin-bottom: 95px;
   }
 
@@ -235,6 +246,7 @@
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 55px;
+    padding-left: 0;
   }
 
   .navigation__link span {
@@ -289,5 +301,19 @@
 
   .navigation__input-tablet-menu {
     min-width: 100%;
+  }
+
+  .navigation__logo svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .navigation__inner {
+    padding: 39px 0 10px;
+  }
+
+  .navigation__login-cart,
+  .navigation__toggle {
+    margin-top: 18px;
   }
 }

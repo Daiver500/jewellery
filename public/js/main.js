@@ -355,7 +355,7 @@ const catalogFilter = document.querySelector(".catalog__filter");
 const filterOpenButton = document.querySelector(".catalog__button-header");
 const filterCloseButton = document.querySelector(".catalog__filter-button-close");
 
-if (mediaQuery.matches) {
+if (mediaQuery.matches && catalogFilter) {
   catalogFilter.classList.add("hidden");
 }
 

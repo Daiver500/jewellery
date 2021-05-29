@@ -1,5 +1,5 @@
 .blog {
-  margin-bottom: 130px;
+  margin-bottom: 107px;
 }
 
 .blog__inner {
@@ -14,11 +14,13 @@
   position: relative;
   margin-bottom: 70px;
   flex-direction: column;
+  max-width: 1200px;
+  padding-left: 19px;
 }
 
 .blog__title {
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 16px;
   font-family: "Cormorant-Garamond", "Arial", sans-serif;
   font-weight: 700;
   font-size: 34px;
@@ -76,6 +78,11 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.blog__item--reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .blog__item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -96,8 +103,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
   background-color: $cards;
+  flex-grow: 1;
+  padding-top: 63px;
 }
 
 .blog__text,
@@ -107,7 +116,7 @@
 }
 
 .blog__data {
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   font-weight: 500;
   font-size: 14px;
   line-height: 18.2px;
@@ -127,7 +136,7 @@
 }
 
 .blog__text {
-  margin-bottom: 50px;
+  margin-bottom: 29px;
 }
 
 .blog__image,
@@ -150,7 +159,7 @@
   }
 
   .blog {
-    margin-bottom: 80px;
+    margin-bottom: 66px;
   }
 
   .blog__inner {
@@ -163,6 +172,7 @@
   .blog__gallery {
     grid-template-columns: 1fr;
     justify-items: center;
+    grid-gap: 46px;
   }
 
   .blog__item,
@@ -176,11 +186,28 @@
     grid-column-start: 1;
     grid-row-start: 1;
   }
+
+  .blog__header {
+    padding-left: 4px;
+    margin-bottom: 66px;
+  }
+
+  .blog__title {
+    margin-bottom: 19px;
+  }
+
+  .blog__item:not(:last-child) {
+    margin-bottom: 44px;
+  }
+
+  .blog__item-tablet .blog__information {
+    padding-top: 84px;
+  }
 }
 
 @media (max-width: $max-mobile-width) {
   .blog {
-    margin-bottom: 70px;
+    margin-bottom: 62px;
   }
 
   .blog__inner {
@@ -190,6 +217,7 @@
 
   .blog__gallery {
     justify-items: unset;
+    grid-gap: 63px;
   }
 
   .blog__item {
@@ -198,10 +226,32 @@
   }
 
   .blog__information {
-    padding: 65px;
+    padding: 42px;
   }
 
   .blog__item--tablet {
     padding: 15px;
+  }
+
+  .blog__item--reverse {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog__header {
+    margin-bottom: 55px;
+  }
+
+  .blog__item:not(:last-child) {
+    margin-bottom: 58px;
+  }
+
+  .blog__item--reverse .blog__information {
+    padding: 38px;
+  }
+
+  .blog__item-tablet .blog__information {
+    padding-top: 60px;
+    padding-bottom: 72px;
   }
 }

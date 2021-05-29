@@ -1,13 +1,13 @@
 .card {
-  margin-bottom: 130px;
+  margin-bottom: 89px;
   position: relative;
-  margin-top: 99px;
+  margin-top: 81px;
 }
 
 .card::before {
   content: "";
   position: absolute;
-  top: -160px;
+  top: -145px;
   background-repeat: no-repeat;
   height: 1px;
   border: 1px solid $borders;
@@ -17,7 +17,7 @@
 .card::after {
   content: "";
   position: absolute;
-  top: -100px;
+  top: -80px;
   background-repeat: no-repeat;
   height: 1px;
   border: 1px solid $borders;
@@ -25,11 +25,12 @@
 }
 
 .card__inner {
-  max-width: 1120px;
+  max-width: 1360px;
 }
 
 .card__images {
   display: flex;
+  padding-left: 43px;
 }
 
 .card__pictures {
@@ -41,7 +42,7 @@
   display: flex;
   flex-direction: column;
   max-width: 125px;
-  padding-right: 10px;
+  padding-right: 25px;
 }
 
 .card__small-picture {
@@ -66,6 +67,7 @@
   display: flex;
   flex-direction: column;
   min-width: 370px;
+  margin-right: 137px;
 }
 
 .card__title,
@@ -74,7 +76,8 @@
 }
 
 .card__title {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: -10px;
   font-family: "Cormorant-Garamond", "Arial", sans-serif;
   font-weight: 700;
   font-size: 34px;
@@ -82,14 +85,14 @@
 }
 
 .card__text {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 26px;
   line-height: 33.8px;
 }
 
 .card__buttons {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 27px;
 }
 
 .card__button {
@@ -108,7 +111,7 @@
 }
 
 .card__table {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   position: relative;
 }
 
@@ -215,7 +218,7 @@
 
   .card {
     margin-top: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 71px;
   }
 
   .card__inner {
@@ -223,9 +226,14 @@
     padding-left: 35px;
   }
 
+  .card__table {
+    margin-bottom: 19px;
+  }
+
   .card__images {
     flex-direction: column-reverse;
-    padding-right: 40px;
+    padding-right: 22px;
+    padding-left: 0;
   }
 
   .card__small-pictures {
@@ -254,6 +262,7 @@
 
   .card__information {
     min-width: 319px;
+    margin-right: 0;
   }
 
   .card__table::before,
@@ -285,7 +294,7 @@
 
   .card {
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 58px;
   }
 
   .card__inner {
@@ -295,7 +304,15 @@
 
   .card__images {
     padding-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 39px;
+  }
+
+  .card__text {
+    margin-bottom: 32px;
+  }
+
+  .card__table {
+    margin-bottom: 6px;
   }
 
   .card__big-picture {

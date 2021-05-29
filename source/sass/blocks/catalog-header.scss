@@ -6,7 +6,7 @@
 .catalog-header::before {
   content: "";
   position: absolute;
-  top: -70px;
+  top: -63px;
   background-repeat: no-repeat;
   height: 1px;
   border: 1px solid $borders;
@@ -26,9 +26,9 @@
 
 .catalog-header__information {
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 35%;
+  left: 51%;
+  transform: translateX(-51%);
   color: $white;
   text-align: center;
 }
@@ -40,7 +40,6 @@
   line-height: 44.2px;
   margin-top: 0;
   margin-bottom: 5px;
-  letter-spacing: 3px;
   text-transform: uppercase;
 }
 
@@ -59,22 +58,37 @@
     display: none;
   }
 
+  .catalog-header__information {
+    left: 52%;
+  }
+
+  .catalog-header__text {
+    max-width: 541px;
+  }
+
+
   .catalog-header {
-    margin-bottom: 50px;
+    margin-bottom: 46px;
   }
 }
 
 @media (max-width: $max-mobile-width) {
   .catalog-header__information {
-    top: 15%;
-  }
-
-  .catalog-header {
-    margin-bottom: 40px;
+    top: 30%;
+    left: 53%;
   }
 
   .catalog-header__text {
+    max-width: 233px;
     font-size: 16px;
     line-height: 26.4px;
+  }
+
+  .catalog-header__title {
+    min-width: 270px;
+  }
+
+  .catalog-header {
+    margin-bottom: 36px;
   }
 }

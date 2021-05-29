@@ -12,17 +12,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 70px;
+  margin-bottom: 66px;
 }
 
 .gallery__title {
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   font-family: "Cormorant-Garamond", "Arial", sans-serif;
   font-weight: 700;
   font-size: 34px;
   line-height: 44.2px;
-  letter-spacing: 3px;
 }
 
 .gallery__link {
@@ -102,11 +101,23 @@
     grid-column-gap: 16px;
     grid-row-gap: 20px;
   }
+
+  .gallery__title {
+    margin-bottom: 19px;
+  }
 }
 
 @media (max-width: $max-mobile-width) {
   .gallery__image--mobile {
     display: none;
+  }
+
+  .gallery {
+    margin-bottom: 72px;
+  }
+
+  .gallery__header {
+    margin-bottom: 53px;
   }
 
   .gallery__inner {
