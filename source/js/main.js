@@ -266,6 +266,7 @@ const slides = document.querySelectorAll(".slider__item");
 const buttonRight = document.querySelector(".slider__button--right");
 const buttonLeft = document.querySelector(".slider__button--left");
 const slidesField = document.querySelector(".slider__wrapper-inner");
+const sliderButtons = document.querySelectorAll(".slider__item-button");
 
 let offset = 0;
 
@@ -290,6 +291,20 @@ buttonLeft.addEventListener("click", () => {
   slidesField.style.transform = `translateX(+${offset}px )`;
 });
 }
+
+sliderButtons.forEach((item) => {
+
+   item.addEventListener("click", function(evt){
+    evt.preventDefault();
+    if (offset === +width.slice(0, width.length - 2) * (slides.length - 3)) {
+      offset = 0;
+    } else {
+      offset += +width.slice(0, width.length - 2);
+    }
+    slidesField.style.transform = `translateX(-${offset}px )`;
+
+   });
+});
 
 
 // Меню
@@ -335,7 +350,7 @@ navigationLogo.style.color = "#a87b62";
 navigationUpperPart.style.marginBottom = "25px";
 }
 
-if (mediaQueryMobile.matches) {
+if (mediaQueryMobile.matches && navigationUpperPartCatalog) {
   navigationUpperPart.style.marginBottom = "15px";
   navigationUpperPartCatalog.style.marginBottom = "-7px";
 }
@@ -455,4 +470,54 @@ filterTitles.forEach((item) => {
   item.addEventListener("click", filterWindowClickHandler);
 });
 
+// Свайп ???
+
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
+
+let xDown = null;
+let yDown = null;
+
+function getTouches(evt) {
+  return evt.touches;
+}
+
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];
+    xDown = firstTouch.clientX;
+    yDown = firstTouch.clientY;
+};
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    const xUp = evt.touches[0].clientX;
+    const yUp = evt.touches[0].clientY;
+
+    const xDiff = xDown - xUp;
+    const yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+        if ( xDiff > 0 ) {
+          if (offset === 0) {
+            offset = +width.slice(0, width.length - 2) * (slides.length - 3);
+          } else {
+            offset -= +width.slice(0, width.length - 2);
+          }
+          slidesField.style.transform = `translateX(+${offset}px )`;
+        } else {
+          if (offset === +width.slice(0, width.length - 2) * (slides.length - 3)) {
+            offset = 0;
+          } else {
+            offset += +width.slice(0, width.length - 2);
+          }
+          slidesField.style.transform = `translateX(-${offset}px )`;
+        }
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;
+};
 })();
