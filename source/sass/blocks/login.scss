@@ -33,6 +33,11 @@
   background-color: $white;
 }
 
+.login__lower-part {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .login__data {
   display: flex;
   flex-direction: column;
@@ -78,7 +83,7 @@
   min-height: 30px;
   border: none;
   background-color: $login-bg;
-  color: $grey;
+  color: $black;
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
@@ -146,6 +151,14 @@
 
 .login__sign-up-text {
   color: $black;
+  border: none;
+  background: inherit;
+  cursor: pointer;
+}
+
+.login__sign-up-text:hover,
+.login__sign-up-text:focus {
+  opacity: 0.5;
 }
 
 .login-success__title {

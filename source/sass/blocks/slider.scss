@@ -116,10 +116,11 @@
 
 .slider__wrapper-inner {
   display: grid;
-  grid-template-columns: repeat(4, 23%);
+  grid-template-columns: repeat(8, 23%);
   grid-gap: 30px;
   transition: 0.5s all;
 }
+
 
 .slider__information {
   display: flex;
@@ -170,6 +171,7 @@
 .slider__link--active span {
   color: $black;
 }
+
 
 @media (max-width: $max-tablet-width) {
   .slider {

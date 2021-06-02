@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.footer__form {
+  display: flex;
+}
+
 .footer__inner {
   padding: 92px 86px;
   display: flex;
@@ -53,7 +57,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  min-width: 395px;
+  min-width: 344px;
   max-height: 20px;
   color: $white;
 }
@@ -66,6 +70,15 @@
 
 .footer__sign-up {
   position: relative;
+  background-color: inherit;
+  border: none;
+  min-width: 79px;
+  cursor: pointer;
+}
+
+.footer__sign-up:hover,
+.footer__sign-up:focus {
+  opacity: 0.5;
 }
 
 .footer__sign-up::after {

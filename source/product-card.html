@@ -68,6 +68,7 @@
     </nav>
   </header>
   <main class="main">
+    <h1 class="visually-hidden">Карточка товара</h1>
     <section class="card">
       <div class="card__inner container">
         <div class="card__pictures">
@@ -233,8 +234,12 @@
           <p class="footer__text">News and updates from CH. No spam, we promise.</p>
         </div>
         <div class="footer__input">
-          <input class="footer__input" type="text" placeholder="Your E-mail">
-          <a class="footer__sign-up" href="#"><span>Sign Up</span></a>
+          <form class="footer__form" action="https://echo.htmlacademy.ru/" method="post">
+            <label> <span class="visually-hidden">E-mail</span>
+            <input class="footer__input" placeholder="Your E-mail" type="email" required>
+            </label>
+            <button type="submit" class="footer__sign-up" href="#"><span>Sign Up</span></button>
+            </form>
         </div>
       </div>
       <div class="footer__links">
@@ -348,7 +353,10 @@
             <input class="login__password" type="password" name="password" placeholder="Password" required="">
           </label>
           <button class="login__button" type="submit">Log In</button>
-          <p class="login__text">Don’t have an account? <span class="login__sign-up-text">Sign Up</span></p>
+          <div class="login__lower-part">
+            <p class="login__text">Don’t have an account?</p>
+            <button type="button" class="login__sign-up-text">Sign Up</button>
+            </div>
         </div>
       </form>
       <button class="login__close" type="button" aria-label="Закрыть модальное окно">

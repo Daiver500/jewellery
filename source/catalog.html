@@ -68,6 +68,7 @@
     </nav>
   </header>
   <main class="main">
+    <h1 class="visually-hidden">Каталог</h1>
     <section class="catalog-header">
       <div class="catalog-header__inner container">
         <picture class="catalog-header__picture">
@@ -108,7 +109,7 @@
             </button>
             <form action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog__checkbox checkbox">
-                <div id="product" class="catalog__title-filter">Product</div>
+                <div id="product" class="catalog__title-filter" tabindex="0">Product</div>
                 <ul id="product-checkbox" class="checkbox__form checkbox__form--active">
                   <li class="checkbox__line">
                     <label class="checkbox__label checkbox__text">
@@ -144,7 +145,7 @@
                 </button>
               </fieldset>
               <fieldset class="catalog__checkbox checkbox">
-                <div id="material" class="catalog__title-filter">Material</div>
+                <div id="material" class="catalog__title-filter" tabindex="0">Material</div>
                 <ul id="material-checkbox" class="checkbox__form">
                   <li class="checkbox__line">
                     <label class="checkbox__label checkbox__text">
@@ -165,7 +166,7 @@
                 </button>
               </fieldset>
               <fieldset class="catalog__checkbox checkbox">
-                <div id="collection" class="catalog__title-filter">Collection</div>
+                <div id="collection" class="catalog__title-filter" tabindex="0">Collection</div>
                 <ul id="collection-checkbox" class="checkbox__form">
                   <li class="checkbox__line">
                     <label class="checkbox__label checkbox__text">
@@ -186,7 +187,7 @@
                 </button>
               </fieldset>
               <fieldset class="catalog__rangebox">
-                <div id="price" class="catalog__title-filter">Price</div>
+                <div id="price" class="catalog__title-filter" tabindex="0">Price</div>
                 <div id="price-checkbox" class="catalog__range range checkbox__form--active">
                   <div class="range__controls">
                     <div class="range__scale">
@@ -430,8 +431,12 @@
           <p class="footer__text">News and updates from CH. No spam, we promise.</p>
         </div>
         <div class="footer__input">
-          <input class="footer__input" type="text" placeholder="Your E-mail">
-          <a class="footer__sign-up" href="#"><span>Sign Up</span></a>
+          <form class="footer__form" action="https://echo.htmlacademy.ru/" method="post">
+            <label> <span class="visually-hidden">E-mail</span>
+            <input class="footer__input" placeholder="Your E-mail" type="email" required>
+            </label>
+            <button type="submit" class="footer__sign-up" href="#"><span>Sign Up</span></button>
+            </form>
         </div>
       </div>
       <div class="footer__links">
@@ -499,7 +504,10 @@
             <input class="login__password" type="password" name="password" placeholder="Password" required="">
           </label>
           <button class="login__button" type="submit">Log In</button>
-          <p class="login__text">Don’t have an account? <span class="login__sign-up-text">Sign Up</span></p>
+          <div class="login__lower-part">
+            <p class="login__text">Don’t have an account?</p>
+            <button type="button" class="login__sign-up-text">Sign Up</button>
+            </div>
         </div>
       </form>
       <button class="login__close" type="button" aria-label="Закрыть модальное окно">

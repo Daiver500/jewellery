@@ -68,6 +68,7 @@
     </nav>
   </header>
   <main class="main">
+    <h1 class="visually-hidden">Сайт о ювелирных изделиях</h1>
     <section class="header">
       <div class="header__inner container">
         <picture class="header__picture">
@@ -142,6 +143,62 @@
                 <div class="slider__information">
                   <p class="slider__text">Gold chain</p>
                   <p class="slider__price">$ 215</p>
+                  <!--width: 270, height: 284, for retina width: 540, height: 568-->
+                </div>
+              </a>
+            </div>
+            <div class="slider__item slider__item-desktop">
+              <a class="slider__link" href="product-card.html" target="_blank" aria-label="карточка товара">
+                <picture class="slider__picture">
+                  <source type="image/webp" srcset="img/slider-picture-4.webp, img/slider-picture-4@2x.webp 2x ">
+                  <img class="slider__image" src="img/slider-picture-4.jpg" srcset="img/slider-picture-4@2x.jpg 2x"
+                    alt="ювелирное изделие" width="270" height="284" />
+                </picture>
+                <div class="slider__information">
+                  <p class="slider__text">Galaxy earrings</p>
+                  <p class="slider__price">$ 95</p>
+                  <!--width: 270, height: 284, for retina width: 540, height: 568-->
+                </div>
+              </a>
+            </div>
+            <div class="slider__item slider__item-desktop">
+              <a class="slider__link" href="product-card.html" target="_blank" aria-label="карточка товара">
+                <picture class="slider__picture">
+                  <source type="image/webp" srcset="img/slider-picture-4.webp, img/slider-picture-4@2x.webp 2x ">
+                  <img class="slider__image" src="img/slider-picture-4.jpg" srcset="img/slider-picture-4@2x.jpg 2x"
+                    alt="ювелирное изделие" width="270" height="284" />
+                </picture>
+                <div class="slider__information">
+                  <p class="slider__text">Galaxy earrings</p>
+                  <p class="slider__price">$ 95</p>
+                  <!--width: 270, height: 284, for retina width: 540, height: 568-->
+                </div>
+              </a>
+            </div>
+            <div class="slider__item slider__item-desktop">
+              <a class="slider__link" href="product-card.html" target="_blank" aria-label="карточка товара">
+                <picture class="slider__picture">
+                  <source type="image/webp" srcset="img/slider-picture-4.webp, img/slider-picture-4@2x.webp 2x ">
+                  <img class="slider__image" src="img/slider-picture-4.jpg" srcset="img/slider-picture-4@2x.jpg 2x"
+                    alt="ювелирное изделие" width="270" height="284" />
+                </picture>
+                <div class="slider__information">
+                  <p class="slider__text">Galaxy earrings</p>
+                  <p class="slider__price">$ 95</p>
+                  <!--width: 270, height: 284, for retina width: 540, height: 568-->
+                </div>
+              </a>
+            </div>
+            <div class="slider__item slider__item-desktop">
+              <a class="slider__link" href="product-card.html" target="_blank" aria-label="карточка товара">
+                <picture class="slider__picture">
+                  <source type="image/webp" srcset="img/slider-picture-4.webp, img/slider-picture-4@2x.webp 2x ">
+                  <img class="slider__image" src="img/slider-picture-4.jpg" srcset="img/slider-picture-4@2x.jpg 2x"
+                    alt="ювелирное изделие" width="270" height="284" />
+                </picture>
+                <div class="slider__information">
+                  <p class="slider__text">Galaxy earrings</p>
+                  <p class="slider__price">$ 95</p>
                   <!--width: 270, height: 284, for retina width: 540, height: 568-->
                 </div>
               </a>
@@ -374,8 +431,12 @@
           <p class="footer__text">News and updates from CH. No spam, we promise.</p>
         </div>
         <div class="footer__input">
-          <input class="footer__input" type="text" placeholder="Your E-mail">
-          <a class="footer__sign-up" href="#"><span>Sign Up</span></a>
+          <form class="footer__form" action="https://echo.htmlacademy.ru/" method="post">
+          <label> <span class="visually-hidden">E-mail</span>
+          <input class="footer__input" placeholder="Your E-mail" type="email" required>
+          </label>
+          <button type="submit" class="footer__sign-up" href="#"><span>Sign Up</span></button>
+          </form>
         </div>
       </div>
       <div class="footer__links">
@@ -443,7 +504,10 @@
             <input class="login__password" type="password" name="password" placeholder="Password" required="">
           </label>
           <button class="login__button" type="submit">Log In</button>
-          <p class="login__text">Don’t have an account? <span class="login__sign-up-text">Sign Up</span></p>
+          <div class="login__lower-part">
+          <p class="login__text">Don’t have an account?</p>
+          <button type="button" class="login__sign-up-text">Sign Up</button>
+          </div>
         </div>
       </form>
       <button class="login__close" type="button" aria-label="Закрыть модальное окно">

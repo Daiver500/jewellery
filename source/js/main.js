@@ -274,7 +274,7 @@ if (slidesField) {
 width = window.getComputedStyle(slidesField).width;
 
 buttonRight.addEventListener("click", () => {
-  if (offset === +width.slice(0, width.length - 2) * (slides.length - 3)) {
+  if (offset === +width.slice(0, width.length - 2) * (slides.length - 7)) {
     offset = 0;
   } else {
     offset += +width.slice(0, width.length - 2);
@@ -284,7 +284,7 @@ buttonRight.addEventListener("click", () => {
 
 buttonLeft.addEventListener("click", () => {
   if (offset === 0) {
-    offset = +width.slice(0, width.length - 2) * (slides.length - 3);
+    offset = +width.slice(0, width.length - 2) * (slides.length - 7);
   } else {
     offset -= +width.slice(0, width.length - 2);
   }
@@ -374,6 +374,9 @@ const filterPriceButton = document.getElementById("price-button");
 const catalogFilter = document.querySelector(".catalog__filter");
 const filterOpenButton = document.querySelector(".catalog__button-header");
 const filterCloseButton = document.querySelector(".catalog__filter-button-close");
+const filterButtonClear = document.querySelector(".filter__button--clear");
+const catalogCheckboxes = document.querySelectorAll(".checkbox__box");
+
 
 if (mediaQuery.matches && catalogFilter) {
   catalogFilter.classList.add("hidden");
@@ -466,8 +469,37 @@ const filterWindowClickHandler = (evt) => {
   }
 };
 
+
 filterTitles.forEach((item) => {
   item.addEventListener("click", filterWindowClickHandler);
+  item.addEventListener("keydown", function (evt) {
+    if(evt.key==="Enter") {
+      filterWindowClickHandler(evt);
+    }
+  });
+});
+
+const clearFilterCheckboxes = () => {
+  catalogCheckboxes.forEach((item) => {
+     item.style.backgroundImage = "url(../img/chekbox-not-checked.svg)";
+  });
+};
+
+if (filterButtonClear) {
+filterButtonClear.addEventListener("click", clearFilterCheckboxes);
+}
+
+catalogCheckboxes.forEach((item) => {
+  item.addEventListener("click", function() {
+    item.style.backgroundImage = "";
+    item.classList.toggle("checkbox__box--active");
+  });
+  item.addEventListener("keydown", function(evt) {
+    if (evt.key === "Enter") {
+    item.style.backgroundImage = "";
+    item.classList.toggle("checkbox__box--active");
+    }
+  });
 });
 
 // Свайп ???

@@ -1,3 +1,17 @@
+.navigation {
+  position: relative;
+}
+
+.navigation::before {
+  content: "";
+  position: absolute;
+  top: 110px;
+  background-repeat: no-repeat;
+  height: 1px;
+  border: 1px solid $borders;
+  width: 100%;
+}
+
 .navigation__upper-part {
   display: flex;
   max-width: 1366px;
@@ -103,10 +117,15 @@
   padding-right: 10px;
 }
 
+.navigation__cart-mobile {
+  display: none;
+}
+
 @media (max-width: $max-tablet-width) {
   .navigation__input,
   .navigation__login,
-  .navigation__cart-desktop {
+  .navigation__cart-desktop,
+  .navigation::before {
     display: none;
   }
 
@@ -137,6 +156,7 @@
     background-repeat: no-repeat;
     width: 20px;
     height: 18px;
+    display: block;
   }
 
   .navigation__cart-mobile--active {

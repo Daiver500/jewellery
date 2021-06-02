@@ -1,9 +1,10 @@
 .header {
   margin-bottom: 107px;
   position: relative;
+  background-color: $white;
 }
 
-.header::before {
+/*.header::before {
   content: "";
   position: absolute;
   top: -62px;
@@ -11,7 +12,7 @@
   height: 1px;
   border: 1px solid $borders;
   width: 100%;
-}
+}*/
 
 .header__inner {
   padding-right: 0;
