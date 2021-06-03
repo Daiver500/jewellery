@@ -172,6 +172,10 @@
   color: $black;
 }
 
+.slider__item-tablet {
+  display: none;
+}
+
 
 @media (max-width: $max-tablet-width) {
   .slider {
@@ -179,6 +183,11 @@
     display: flex;
     justify-content: center;
   }
+
+  .slider__item-tablet {
+    display: block;
+  }
+
 
   .slider__item-desktop {
     display: none;
