@@ -278,7 +278,7 @@ if (slidesField) {
 width = window.getComputedStyle(slidesField).width;
 
 buttonRight.addEventListener("click", () => {
-  if (offset === +width.slice(0, width.length - 2) * (slides.length - 7)) {
+  if (offset === +width.slice(0, width.length - 2) * (slides.length - 3)) {
     offset = 0;
   } else {
     offset += +width.slice(0, width.length - 2);
@@ -288,7 +288,7 @@ buttonRight.addEventListener("click", () => {
 
 buttonLeft.addEventListener("click", () => {
   if (offset === 0) {
-    offset = +width.slice(0, width.length - 2) * (slides.length - 7);
+    offset = +width.slice(0, width.length - 2) * (slides.length - 3);
   } else {
     offset -= +width.slice(0, width.length - 2);
   }
@@ -361,7 +361,7 @@ if (mediaQueryMobile.matches ) {
 }
 
 if (mediaQueryMobile.matches && navigationUpperPartCatalog) {
-    navigationUpperPartCatalog.style.marginBottom = "-7px";
+    navigationUpperPartCatalog.style.marginBottom = "-5px";
 }
 
 navigationToggle.addEventListener(`click`, navigationOpen);
