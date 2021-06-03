@@ -95,7 +95,7 @@
 
 @media (max-width: $max-tablet-width) {
   .faq {
-    margin-bottom: 64px;
+    margin-bottom: 67px;
   }
 
   .faq__inner {
@@ -120,6 +120,14 @@
   .faq__item:not(:last-child) {
     margin-bottom: 39px;
     padding-bottom: 24px;
+  }
+
+  .faq__title-header {
+    padding-left: 0;
+  }
+
+  .faq__header {
+    margin-bottom: 48px;
   }
 }
 

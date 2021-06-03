@@ -257,8 +257,12 @@ const faqWindowClickHandler = (evt) => {
 
 faqTitles.forEach((item) => {
   item.addEventListener("click", faqWindowClickHandler);
+  item.addEventListener("keydown", function (evt) {
+    if(evt.key==="Enter") {
+      faqWindowClickHandler(evt);
+    }
+  });
 });
-
 
 // Слайдер
 const mobileSlider = window.matchMedia("(max-width: 1023px)");

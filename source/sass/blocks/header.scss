@@ -64,12 +64,18 @@
     margin-bottom: 65px;
   }
 
+  .header__title {
+    margin-bottom: -7px;
+    letter-spacing: 1px;
+  }
+
   .header__image {
     object-fit: fill;
   }
 
   .header__information {
-    transform: translateX(-50%);
+    transform: translateX(-53%);
+    top: 39%;
   }
 }
 
@@ -79,7 +85,8 @@
   }
 
   .header__information {
-    top: 40%;
+    top: 40.5%;
+    transform: translateX(-51%);
   }
 
   .header__title {

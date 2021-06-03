@@ -160,6 +160,10 @@
   .footer input {
     min-width: 454px;
   }
+
+  .footer__sign-up {
+    margin-left: -5px;
+  }
 }
 
 @media (max-width: $max-mobile-width) {
@@ -174,6 +178,7 @@
 
   .footer__text {
     padding-right: 43px;
+    margin-bottom: 43px;
   }
 
   .footer__title {

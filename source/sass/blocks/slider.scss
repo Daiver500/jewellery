@@ -175,7 +175,7 @@
 
 @media (max-width: $max-tablet-width) {
   .slider {
-    margin-bottom: 64px;
+    margin-bottom: 47px;
     display: flex;
     justify-content: center;
   }
@@ -208,11 +208,11 @@
   }
 
   .slider__button--right {
-    right: 46px;
+    right: 6px;
   }
 
   .slider__button--left {
-    left: 44px;
+    left: 2px;
   }
 
   .slider__info {
@@ -230,6 +230,14 @@
 
   .slider__header {
     margin-bottom: 57px;
+  }
+
+  .slider__list {
+    padding-left: 0;
+  }
+
+  .slider__item-button:not(:last-child) {
+    padding-right: 12px;
   }
 }
 
