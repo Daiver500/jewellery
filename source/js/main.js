@@ -356,9 +356,12 @@ navigationLogo.style.color = "#a87b62";
 navigationUpperPart.style.marginBottom = "25px";
 }
 
-if (mediaQueryMobile.matches && navigationUpperPartCatalog) {
+if (mediaQueryMobile.matches ) {
   navigationUpperPart.style.marginBottom = "15px";
-  navigationUpperPartCatalog.style.marginBottom = "-7px";
+}
+
+if (mediaQueryMobile.matches && navigationUpperPartCatalog) {
+    navigationUpperPartCatalog.style.marginBottom = "-7px";
 }
 
 navigationToggle.addEventListener(`click`, navigationOpen);

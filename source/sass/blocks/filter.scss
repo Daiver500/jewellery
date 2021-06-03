@@ -4,12 +4,11 @@
 
 .catalog__form {
   border: 1px solid $brown;
-  padding-top: 21px;
+  padding-top: 18px;
   padding-bottom: 0;
-  margin-bottom: 35px;
+  margin-bottom: 9px;
   min-width: 250px;
 }
-
 
 .catalog__title-filter {
   font-weight: 500;
@@ -30,6 +29,7 @@
   border: none;
   position: relative;
   padding-bottom: 20px;
+  padding-top: 17px;
 }
 
 .catalog__range {
@@ -71,11 +71,11 @@
 }
 
 .range__toggle--min {
-  left: 25%;
+  left: 22%;
 }
 
 .range__toggle--max {
-  left: 76%;
+  left: 75%;
 }
 
 .catalog__checkbox {
@@ -83,7 +83,7 @@
   margin-left: 0;
   margin-right: 0;
   position: relative;
-  padding-bottom: 20px;
+  //padding-bottom: 20px;
 }
 
 .catalog__checkbox,
@@ -98,7 +98,7 @@
 .catalog__checkbox::after {
   content: "";
   position: absolute;
-  bottom: 19px;
+  bottom: 15px;
   left: 0;
   background-repeat: no-repeat;
   height: 1px;
@@ -182,7 +182,7 @@
 }
 
 .filter__button--apply {
-  margin-bottom: 13px;
+  margin-bottom: 20px;
 }
 
 .filter__button--apply:hover,
