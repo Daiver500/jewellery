@@ -278,7 +278,7 @@ if (slidesField) {
 width = window.getComputedStyle(slidesField).width;
 
 buttonRight.addEventListener("click", () => {
-  if (offset === +width.slice(0, width.length - 2) * (slides.length - 3)) {
+  if (offset === +width.slice(0, width.length - 2) * (slides.length - 7)) {
     offset = 0;
   } else {
     offset += +width.slice(0, width.length - 2);
@@ -288,7 +288,7 @@ buttonRight.addEventListener("click", () => {
 
 buttonLeft.addEventListener("click", () => {
   if (offset === 0) {
-    offset = +width.slice(0, width.length - 2) * (slides.length - 3);
+    offset = +width.slice(0, width.length - 2) * (slides.length - 7);
   } else {
     offset -= +width.slice(0, width.length - 2);
   }
@@ -300,7 +300,7 @@ sliderButtons.forEach((item) => {
 
    item.addEventListener("click", function(evt){
     evt.preventDefault();
-    if (offset === +width.slice(0, width.length - 2) * (slides.length - 3)) {
+    if (offset === +width.slice(0, width.length - 2) * (slides.length - 7)) {
       offset = 0;
     } else {
       offset += +width.slice(0, width.length - 2);
@@ -543,13 +543,13 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
         if ( xDiff > 0 ) {
           if (offset === 0) {
-            offset = +width.slice(0, width.length - 2) * (slides.length - 3);
+            offset = +width.slice(0, width.length - 2) * (slides.length - 7);
           } else {
             offset -= +width.slice(0, width.length - 2);
           }
           slidesField.style.transform = `translateX(+${offset}px )`;
         } else {
-          if (offset === +width.slice(0, width.length - 2) * (slides.length - 3)) {
+          if (offset === +width.slice(0, width.length - 2) * (slides.length - 7)) {
             offset = 0;
           } else {
             offset += +width.slice(0, width.length - 2);
