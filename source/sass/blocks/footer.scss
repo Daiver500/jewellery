@@ -9,7 +9,7 @@
 }
 
 .footer__inner {
-  padding: 92px 86px;
+  padding: 90px 0 92px 79px;
   display: flex;
   max-width: 1312px;
   padding-right: 0;
@@ -25,7 +25,7 @@
 .footer__information::after {
   content: "";
   position: absolute;
-  bottom: 29px;
+  bottom: 21px;
   background-repeat: no-repeat;
   height: 1px;
   min-width: 500px;
@@ -44,10 +44,11 @@
   font-weight: 700;
   font-size: 34px;
   line-height: 44.2px;
+  letter-spacing: 0.5px;
 }
 
 .footer__text {
-  margin-bottom: 44px;
+  margin-bottom: 46px;
   color: $grey;
 }
 
@@ -74,6 +75,7 @@
   border: none;
   min-width: 79px;
   cursor: pointer;
+  margin-left: 42px;
 }
 
 .footer__sign-up:hover,
@@ -96,7 +98,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 742px;
-  padding-top: 5px;
+  padding-top: 7px;
   grid-gap: 69px;
   padding-left: 54px;
 }

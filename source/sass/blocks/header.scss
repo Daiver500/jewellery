@@ -23,13 +23,14 @@
 
 .header__image {
   min-height: 463px;
+  background-color: $brown;
 }
 
 .header__information {
   position: absolute;
   top: 38%;
   left: 50%;
-  transform: translateX(-45%);
+  transform: translateX(-47%);
   color: $white;
 }
 

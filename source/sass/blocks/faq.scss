@@ -1,10 +1,10 @@
 .faq {
-  margin-bottom: 108px;
+  margin-bottom: 116px;
 }
 
 .faq__inner {
   max-width: 973px;
-  padding-left: 0;
+  padding-left: 5px;
   padding-right: 0;
 }
 
@@ -20,6 +20,8 @@
   font-size: 34px;
   line-height: 44.2px;
   margin-bottom: 0;
+  letter-spacing: 1px;
+  padding-left: 10px;
 }
 
 .faq__item {
@@ -29,9 +31,9 @@
 }
 
 .faq__item:not(:last-child) {
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   border-bottom: 2px solid $brown;
-  padding-bottom: 49px;
+  padding-bottom: 44px;
 }
 
 .faq__table {

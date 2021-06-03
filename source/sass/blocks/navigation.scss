@@ -33,7 +33,8 @@
   padding-top: 11px;
   grid-template-columns: 1fr 1fr;
   display: grid;
-  grid-gap: 35px;
+  grid-gap: 22px;
+  padding-right: 14px;
 }
 
 .navigation__login:hover,
@@ -74,8 +75,9 @@
 }
 
 .navigation__menu {
-  justify-content: center;
+  //justify-content: center;
   display: flex;
+  padding-left: 30%;
 }
 
 .navigation__list {
@@ -83,12 +85,11 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr min-content min-content min-content min-content;
-  grid-gap: 35px;
+  grid-gap: 20px;
   justify-items: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  padding-left: 110px;
 }
 
 .navigation__link:hover,
@@ -285,6 +286,11 @@
     overflow: hidden;
   }
 
+  .scroll {
+    overflow: scroll;
+    height: 100vh;
+  }
+
   .navigation__inner--open {
     background-color: $brown;
     padding-bottom: 80px;
@@ -317,6 +323,7 @@
 
   .navigation__upper-part::before {
     left: 34px;
+    top: 84px;
   }
 
   .navigation__input-tablet-menu {

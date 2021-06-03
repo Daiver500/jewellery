@@ -1,5 +1,5 @@
 .slider {
-  margin-bottom: 127px;
+  margin-bottom: 113px;
 }
 
 .slider-product-card {
@@ -12,8 +12,8 @@
 }
 
 .slider__inner {
-  max-width: 1170px;
-  padding: 0 20px;
+  max-width: 1200px;
+  //padding: 0 20px;
 }
 
 .slider__header {
@@ -117,7 +117,7 @@
 .slider__wrapper-inner {
   display: grid;
   grid-template-columns: repeat(8, 23%);
-  grid-gap: 30px;
+  grid-gap: 35px;
   transition: 0.5s all;
 }
 
@@ -145,10 +145,10 @@
 
 .slider__list {
   list-style: none;
-  padding-left: 0;
   display: flex;
   justify-content: center;
   margin-top: -6px;
+  padding-left: 61px;
 }
 
 .slider__buttons-mobile {

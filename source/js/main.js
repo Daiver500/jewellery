@@ -309,6 +309,7 @@ sliderButtons.forEach((item) => {
 
 // Меню
 
+const navigation = document.querySelector(".navigation");
 const navigationToggle = document.querySelector(".navigation__toggle");
 const navigationMenu = document.querySelector(".navigation__menu");
 const navigationInput = document.querySelector(".navigation__input-tablet");
@@ -324,6 +325,7 @@ const navigationOpen = () => {
   navigationMenu.classList.toggle(`hidden`);
   navigationInput.classList.toggle("hidden");
   document.body.classList.toggle(`no-scroll`);
+  navigation.classList.toggle(`scroll`);
   navigationToggle.classList.toggle("navigation__toggle--active");
   navigationCart.classList.toggle("navigation__cart-mobile--active");
   if (mediaQuery.matches && !navigationMenu.classList.contains("hidden")) {
