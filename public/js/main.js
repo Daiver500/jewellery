@@ -257,8 +257,12 @@ const faqWindowClickHandler = (evt) => {
 
 faqTitles.forEach((item) => {
   item.addEventListener("click", faqWindowClickHandler);
+  item.addEventListener("keydown", function (evt) {
+    if(evt.key==="Enter") {
+      faqWindowClickHandler(evt);
+    }
+  });
 });
-
 
 // Слайдер
 const mobileSlider = window.matchMedia("(max-width: 1023px)");
@@ -309,6 +313,7 @@ sliderButtons.forEach((item) => {
 
 // Меню
 
+const navigation = document.querySelector(".navigation");
 const navigationToggle = document.querySelector(".navigation__toggle");
 const navigationMenu = document.querySelector(".navigation__menu");
 const navigationInput = document.querySelector(".navigation__input-tablet");
@@ -324,6 +329,7 @@ const navigationOpen = () => {
   navigationMenu.classList.toggle(`hidden`);
   navigationInput.classList.toggle("hidden");
   document.body.classList.toggle(`no-scroll`);
+  navigation.classList.toggle(`scroll`);
   navigationToggle.classList.toggle("navigation__toggle--active");
   navigationCart.classList.toggle("navigation__cart-mobile--active");
   if (mediaQuery.matches && !navigationMenu.classList.contains("hidden")) {
@@ -350,9 +356,12 @@ navigationLogo.style.color = "#a87b62";
 navigationUpperPart.style.marginBottom = "25px";
 }
 
-if (mediaQueryMobile.matches && navigationUpperPartCatalog) {
+if (mediaQueryMobile.matches ) {
   navigationUpperPart.style.marginBottom = "15px";
-  navigationUpperPartCatalog.style.marginBottom = "-7px";
+}
+
+if (mediaQueryMobile.matches && navigationUpperPartCatalog) {
+    navigationUpperPartCatalog.style.marginBottom = "-5px";
 }
 
 navigationToggle.addEventListener(`click`, navigationOpen);
@@ -374,6 +383,9 @@ const filterPriceButton = document.getElementById("price-button");
 const catalogFilter = document.querySelector(".catalog__filter");
 const filterOpenButton = document.querySelector(".catalog__button-header");
 const filterCloseButton = document.querySelector(".catalog__filter-button-close");
+const filterButtonClear = document.querySelector(".filter__button--clear");
+const catalogCheckboxes = document.querySelectorAll(".checkbox__box");
+
 
 if (mediaQuery.matches && catalogFilter) {
   catalogFilter.classList.add("hidden");
@@ -466,8 +478,37 @@ const filterWindowClickHandler = (evt) => {
   }
 };
 
+
 filterTitles.forEach((item) => {
   item.addEventListener("click", filterWindowClickHandler);
+  item.addEventListener("keydown", function (evt) {
+    if(evt.key==="Enter") {
+      filterWindowClickHandler(evt);
+    }
+  });
+});
+
+const clearFilterCheckboxes = () => {
+  catalogCheckboxes.forEach((item) => {
+     item.style.backgroundImage = "url(../img/chekbox-not-checked.svg)";
+  });
+};
+
+if (filterButtonClear) {
+filterButtonClear.addEventListener("click", clearFilterCheckboxes);
+}
+
+catalogCheckboxes.forEach((item) => {
+  item.addEventListener("click", function() {
+    item.style.backgroundImage = "";
+    item.classList.toggle("checkbox__box--active");
+  });
+  item.addEventListener("keydown", function(evt) {
+    if (evt.key === "Enter") {
+    item.style.backgroundImage = "";
+    item.classList.toggle("checkbox__box--active");
+    }
+  });
 });
 
 // Свайп ???
