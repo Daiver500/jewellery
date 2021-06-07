@@ -490,7 +490,7 @@ filterTitles.forEach((item) => {
 
 const clearFilterCheckboxes = () => {
   catalogCheckboxes.forEach((item) => {
-     item.style.backgroundImage = "url(../img/chekbox-not-checked.svg)";
+     item.style.backgroundImage = "url(img/chekbox-not-checked.svg)";
   });
 };
 
