@@ -39,7 +39,7 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 20px;
+  top: 23px;
   background-repeat: no-repeat;
   height: 1px;
   border: 1px solid $brown;
@@ -209,7 +209,7 @@
 
 @media (max-width: $max-mobile-width) {
   .blog {
-    margin-bottom: 52px;
+    margin-bottom: 61px;
   }
 
   .blog__inner {
@@ -219,7 +219,7 @@
 
   .blog__gallery {
     justify-items: unset;
-    grid-gap: 54px;
+    grid-gap: 40px;
   }
 
   .blog__item {
@@ -229,6 +229,7 @@
 
   .blog__information {
     padding: 42px;
+    padding-bottom: 53px;
   }
 
   .blog__item--tablet {
@@ -241,19 +242,20 @@
   }
 
   .blog__header {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 
   .blog__item:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 42px;
   }
 
   .blog__item--reverse .blog__information {
     padding: 38px;
+    padding-bottom: 53px;
   }
 
   .blog__item-tablet .blog__information {
-    padding-top: 60px;
-    padding-bottom: 72px;
+    padding-top: 56px;
+    padding-bottom: 67px;
   }
 }

@@ -29,7 +29,11 @@
   border: none;
   position: relative;
   padding-bottom: 20px;
-  padding-top: 17px;
+  padding-top: 5px;
+}
+
+.catalog__title-filter-rangebox {
+  margin-bottom: 5px;
 }
 
 .catalog__range {
@@ -198,13 +202,14 @@
   border: none;
   background-color: inherit;
   position: absolute;
-  top: 0;
+  top: 8px;
   right: 30px;
   background-image: url("../img/down-button.svg");
   background-repeat: no-repeat;
   width: 17px;
   height: 10px;
   cursor: pointer;
+  z-index: -1;
 }
 
 .checkbox__form--active {

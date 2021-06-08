@@ -490,7 +490,7 @@ filterTitles.forEach((item) => {
 
 const clearFilterCheckboxes = () => {
   catalogCheckboxes.forEach((item) => {
-     item.style.backgroundImage = "url(../img/chekbox-not-checked.svg)";
+     item.style.backgroundImage = "url(img/chekbox-not-checked.svg)";
   });
 };
 
@@ -504,7 +504,8 @@ catalogCheckboxes.forEach((item) => {
     item.classList.toggle("checkbox__box--active");
   });
   item.addEventListener("keydown", function(evt) {
-    if (evt.key === "Enter") {
+    if (evt.code === "Space") {
+    evt.preventDefault();
     item.style.backgroundImage = "";
     item.classList.toggle("checkbox__box--active");
     }

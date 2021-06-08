@@ -95,6 +95,7 @@
 
   .gallery__title {
     padding-left: 0;
+    margin-bottom: 19px;
   }
 
   .gallery__inner {
@@ -106,10 +107,6 @@
     grid-template-rows: 133px 87px;
     grid-column-gap: 16px;
     grid-row-gap: 20px;
-  }
-
-  .gallery__title {
-    margin-bottom: 19px;
   }
 }
 
@@ -128,6 +125,8 @@
 
   .gallery__inner {
     max-width: 290px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .gallery__pictures {

@@ -278,7 +278,7 @@ if (slidesField) {
 width = window.getComputedStyle(slidesField).width;
 
 buttonRight.addEventListener("click", () => {
-  if (offset === +width.slice(0, width.length - 2) * (slides.length - 7)) {
+  if (offset === +width.slice(0, width.length - 2) * (slides.length - 9)) {
     offset = 0;
   } else {
     offset += +width.slice(0, width.length - 2);
@@ -288,11 +288,11 @@ buttonRight.addEventListener("click", () => {
 
 buttonLeft.addEventListener("click", () => {
   if (offset === 0) {
-    offset = +width.slice(0, width.length - 2) * (slides.length - 7);
+    offset = +width.slice(0, width.length - 2) * (slides.length - 9);
   } else {
     offset -= +width.slice(0, width.length - 2);
   }
-  slidesField.style.transform = `translateX(+${offset}px )`;
+  slidesField.style.transform = `translateX(-${offset}px )`;
 });
 }
 
@@ -300,7 +300,7 @@ sliderButtons.forEach((item) => {
 
    item.addEventListener("click", function(evt){
     evt.preventDefault();
-    if (offset === +width.slice(0, width.length - 2) * (slides.length - 7)) {
+    if (offset === +width.slice(0, width.length - 2) * (slides.length - 9)) {
       offset = 0;
     } else {
       offset += +width.slice(0, width.length - 2);
@@ -504,7 +504,8 @@ catalogCheckboxes.forEach((item) => {
     item.classList.toggle("checkbox__box--active");
   });
   item.addEventListener("keydown", function(evt) {
-    if (evt.key === "Enter") {
+    if (evt.code === "Space") {
+    evt.preventDefault();
     item.style.backgroundImage = "";
     item.classList.toggle("checkbox__box--active");
     }
@@ -543,13 +544,13 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
         if ( xDiff > 0 ) {
           if (offset === 0) {
-            offset = +width.slice(0, width.length - 2) * (slides.length - 7);
+            offset = +width.slice(0, width.length - 2) * (slides.length - 9);
           } else {
             offset -= +width.slice(0, width.length - 2);
           }
-          slidesField.style.transform = `translateX(+${offset}px )`;
+          slidesField.style.transform = `translateX(-${offset}px )`;
         } else {
-          if (offset === +width.slice(0, width.length - 2) * (slides.length - 7)) {
+          if (offset === +width.slice(0, width.length - 2) * (slides.length - 9)) {
             offset = 0;
           } else {
             offset += +width.slice(0, width.length - 2);

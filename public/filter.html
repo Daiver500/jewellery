@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Сайт о ювелирных изделиях</title>
-  <meta name="description" content="Ювелирные изделия">
-  <meta name="keywords" content="кольца, ожерелья, серьги">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preload" href="css/style.min.css" as="style">
-  <link rel="preload" href="fonts/poppins-regular.woff" as="font">
-  <link rel="preload" href="fonts/cormorant-garamond-600.woff2" as="font">
-  <link rel="stylesheet" href="css/style.min.css">
+  <meta name="description" content="Ювелирные изделия" />
+  <meta name="keywords" content="кольца, ожерелья, серьги" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" href="css/style.min.css" as="style" />
+  <link rel="preload" href="fonts/poppins-regular.woff" as="font" />
+  <link rel="preload" href="fonts/cormorant-garamond-600.woff2" as="font" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body class="page">
@@ -20,15 +20,19 @@
         <h2 class="visually-hidden">Фильтр</h2>
         <button class="filter-page__button-close" type="button" aria-label="закрыть фильтр">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="16" fill="currentColor"></circle>
-            <path d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z" fill="currentColor"></path>
+            <circle cx="16" cy="16" r="16" fill="currentColor" />
+            <path
+              d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z"
+              fill="currentColor" />
           </svg>
         </button>
         <form action="https://echo.htmlacademy.ru/" method="get">
           <button class="catalog__filter-button-close hidden" aria-label="закрыть фильтр">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="16" fill="#1D1613"></circle>
-              <path d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z" fill="white"></path>
+              <circle cx="16" cy="16" r="16" fill="#1D1613" />
+              <path
+                d="M16 14.4447L21.4447 9L23 10.5553L17.5553 16L23 21.4447L21.4447 23L16 17.5553L10.5553 23L9 21.4447L14.4447 16L9 10.5553L10.5553 9L16 14.4447Z"
+                fill="white" />
             </svg>
           </button>
           <fieldset class="catalog__checkbox checkbox">
@@ -36,34 +40,35 @@
             <ul id="product-checkbox" class="checkbox__form checkbox__form--active">
               <li class="checkbox__line">
                 <label class="checkbox__label checkbox__text">
-                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked />
                   <span class="checkbox__box" tabindex="0"></span>
                   Necklaces
                 </label>
               </li>
               <li class="checkbox__line">
                 <label class="checkbox__label checkbox__text">
-                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked />
                   <span class="checkbox__box" tabindex="0"></span>
                   Chockers
                 </label>
               </li>
               <li class="checkbox__line">
                 <label class="checkbox__label checkbox__text">
-                  <input class="checkbox__input" type="checkbox" name="Slider">
+                  <input class="checkbox__input" type="checkbox" name="Slider" />
                   <span class="checkbox__box" tabindex="0"></span>
                   Rings
                 </label>
               </li>
               <li class="checkbox__line">
                 <label class="checkbox__label checkbox__text">
-                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked />
                   <span class="checkbox__box" tabindex="0"></span>
                   Earrings
                 </label>
               </li>
             </ul>
-            <button id="product-button" class="form__button form__button--active" type="button" aria-label="кнопка открыть-закрыть">
+            <button id="product-button" class="form__button form__button--active" type="button"
+              aria-label="кнопка открыть-закрыть">
             </button>
           </fieldset>
           <fieldset class="catalog__checkbox checkbox">
@@ -71,14 +76,14 @@
             <ul id="material-checkbox" class="checkbox__form">
               <li class="checkbox__line">
                 <label class="checkbox__label checkbox__text">
-                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked />
                   <span class="checkbox__box" tabindex="0"></span>
                   Gold
                 </label>
               </li>
               <li class="checkbox__line">
                 <label class="checkbox__label checkbox__text">
-                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked />
                   <span class="checkbox__box" tabindex="0"></span>
                   Silver
                 </label>
@@ -92,14 +97,14 @@
             <ul id="collection-checkbox" class="checkbox__form">
               <li class="checkbox__line">
                 <label class="checkbox__label checkbox__text">
-                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked />
                   <span class="checkbox__box" tabindex="0"></span>
                   Pink Flamingo
                 </label>
               </li>
               <li class="checkbox__line">
                 <label class="checkbox__label checkbox__text">
-                  <input class="checkbox__input" type="checkbox" name="Slider" checked="">
+                  <input class="checkbox__input" type="checkbox" name="Slider" checked />
                   <span class="checkbox__box" tabindex="0"></span>
                   Dreams
                 </label>
@@ -109,7 +114,7 @@
             </button>
           </fieldset>
           <fieldset class="catalog__rangebox">
-            <div id="price" class="catalog__title-filter">Price</div>
+            <div id="price" class="catalog__title-filter catalog__title-filter-rangebox">Price</div>
             <div id="price-checkbox" class="catalog__range range checkbox__form--active">
               <div class="range__controls">
                 <div class="range__scale">
@@ -123,7 +128,8 @@
                 </div>
               </div>
             </div>
-            <button id="checkbox-button" class="form__button form__button--active" type="button" aria-label="кнопка открыть-закрыть">
+            <button id="checkbox-button" class="form__button form__button--active" type="button"
+              aria-label="кнопка открыть-закрыть">
             </button>
           </fieldset>
         </form>

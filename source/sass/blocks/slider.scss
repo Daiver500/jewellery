@@ -1,5 +1,5 @@
 .slider {
-  margin-bottom: 113px;
+  margin-bottom: 101px;
 }
 
 .slider-product-card {
@@ -14,6 +14,7 @@
 .slider__inner {
   max-width: 1200px;
   //padding: 0 20px;
+  overflow: hidden;
 }
 
 .slider__header {
@@ -204,12 +205,14 @@
   .slider__wrapper {
     overflow: hidden;
     margin-bottom: 49px;
+    padding-left: 47px;
   }
 
   .slider__wrapper-inner {
-    grid-template-columns: 324px 324px;
+    //grid-template-columns: 324px 324px;
     grid-gap: 39px;
     //padding-left: 46px;
+    grid-template-columns: repeat(4, 45%);
   }
 
   .slider__link--tablet {
@@ -217,11 +220,11 @@
   }
 
   .slider__button--right {
-    right: 6px;
+    right: 46px;
   }
 
   .slider__button--left {
-    left: 2px;
+    left: 45px;
   }
 
   .slider__info {
@@ -261,7 +264,7 @@
   }
 
   .slider__wrapper-inner {
-    grid-template-columns: 130px 130px;
+    grid-template-columns: repeat(4, 42%);
     grid-gap: 30px;
     //transform: translateX(4%);
     padding-left: 0;
@@ -286,10 +289,11 @@
   }
 
   .slider__information {
-    margin-top: 9px;
+    margin-top: 13px;
   }
 
   .slider__wrapper {
     margin-bottom: 36px;
+    padding-left: 16px;
   }
 }
