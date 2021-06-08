@@ -141,6 +141,13 @@
   padding-left: 22%;
 }
 
+@media (max-width: 1265px) {
+  .footer__links {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 14px;
+  }
+}
+
 @media (max-width: 1060px) {
   .footer__links {
     grid-gap: 40px;

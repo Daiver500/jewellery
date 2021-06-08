@@ -210,6 +210,16 @@
   left: 0;
 }
 
+@media (max-width: 1240px) {
+  .card__information {
+    margin-right: 0;
+  }
+
+  .card__images {
+    padding-left: 0;
+  }
+}
+
 @media (max-width: $max-tablet-width) {
   .card::before,
   .card::after {
